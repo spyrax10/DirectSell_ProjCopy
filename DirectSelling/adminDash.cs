@@ -1508,7 +1508,7 @@ namespace DirectSelling
                 string sex = cbNewCusSex.Text;              string bar = cbNewCusBar.Text;
                 string stat = cbNewCusStat.Text;            string hou = tbNewCusHou.Text;
                 string mob = tbNewCusMob.Text;
-                string pre = "CUS";
+                string pre = "CS";
 
 
                 if (first == "" || mid == "" || last == "" || sex == "" ||
