@@ -2000,7 +2000,7 @@ namespace DirectSelling
                 string profit = numPro.Value.ToString();
                 double pro = Double.Parse(profit) / 100;
                 string pre = cbNewProdBrand.Text.ToUpper();
-                string prodId = pre.Substring(0, 3);
+                string prodId = "NW";//pre.Substring(0, 3);
                 string date = DateTime.Now.ToShortDateString();
 
 
