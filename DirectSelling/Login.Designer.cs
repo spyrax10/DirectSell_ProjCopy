@@ -32,7 +32,6 @@
             this.paneMain = new System.Windows.Forms.Panel();
             this.paneLog = new System.Windows.Forms.Panel();
             this.gBLog = new System.Windows.Forms.GroupBox();
-            this.btnFB = new System.Windows.Forms.Button();
             this.lblCode = new System.Windows.Forms.LinkLabel();
             this.btnLog = new System.Windows.Forms.Button();
             this.tbPass = new System.Windows.Forms.TextBox();
@@ -44,6 +43,8 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnCode = new System.Windows.Forms.Button();
             this.tbCode = new System.Windows.Forms.TextBox();
+            this.btnOut = new System.Windows.Forms.Button();
+            this.btnFB = new System.Windows.Forms.Button();
             this.paneMain.SuspendLayout();
             this.paneLog.SuspendLayout();
             this.gBLog.SuspendLayout();
@@ -74,6 +75,7 @@
             // 
             // gBLog
             // 
+            this.gBLog.Controls.Add(this.btnOut);
             this.gBLog.Controls.Add(this.btnFB);
             this.gBLog.Controls.Add(this.lblCode);
             this.gBLog.Controls.Add(this.btnLog);
@@ -89,21 +91,6 @@
             this.gBLog.TabIndex = 2;
             this.gBLog.TabStop = false;
             this.gBLog.Text = "Login";
-            // 
-            // btnFB
-            // 
-            this.btnFB.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnFB.FlatAppearance.BorderSize = 0;
-            this.btnFB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnFB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFB.Image = global::DirectSelling.Properties.Resources.social_facebook_box_blue_icon;
-            this.btnFB.Location = new System.Drawing.Point(3, 147);
-            this.btnFB.Name = "btnFB";
-            this.btnFB.Size = new System.Drawing.Size(22, 23);
-            this.btnFB.TabIndex = 104;
-            this.btnFB.UseVisualStyleBackColor = true;
-            this.btnFB.Click += new System.EventHandler(this.btnFB_Click);
             // 
             // lblCode
             // 
@@ -242,6 +229,34 @@
             this.tbCode.TabIndex = 1;
             this.tbCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnOut
+            // 
+            this.btnOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOut.FlatAppearance.BorderSize = 0;
+            this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOut.Image = global::DirectSelling.Properties.Resources.Button_Close_icon_16_;
+            this.btnOut.Location = new System.Drawing.Point(295, -2);
+            this.btnOut.Name = "btnOut";
+            this.btnOut.Size = new System.Drawing.Size(22, 23);
+            this.btnOut.TabIndex = 105;
+            this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
+            // 
+            // btnFB
+            // 
+            this.btnFB.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFB.FlatAppearance.BorderSize = 0;
+            this.btnFB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnFB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFB.Image = global::DirectSelling.Properties.Resources.social_facebook_box_blue_icon;
+            this.btnFB.Location = new System.Drawing.Point(3, 147);
+            this.btnFB.Name = "btnFB";
+            this.btnFB.Size = new System.Drawing.Size(22, 23);
+            this.btnFB.TabIndex = 104;
+            this.btnFB.UseVisualStyleBackColor = true;
+            this.btnFB.Click += new System.EventHandler(this.btnFB_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -285,5 +300,6 @@
         private System.Windows.Forms.LinkLabel lblCode;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnFB;
+        private System.Windows.Forms.Button btnOut;
     }
 }

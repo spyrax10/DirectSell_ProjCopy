@@ -251,5 +251,18 @@ namespace DirectSelling
         {
             Process.Start("https://www.facebook.com/messages/t/spyrax192");
         }
+
+        private void btnOut_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("This would make application close, Continue?", 
+                " Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                return;
+            }
+        }
     }
 }

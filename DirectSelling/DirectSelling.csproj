@@ -252,6 +252,7 @@
     <None Include="Resources\Bonsai-Tablet-point-of-sale-restaurant-updated-items-SR17-10R1.jpg" />
     <Content Include="POS.ico" />
     <None Include="Resources\Home-icon.png" />
+    <None Include="Resources\Button-Close-icon%2816%29.png" />
     <Content Include="spy.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
