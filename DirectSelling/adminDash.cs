@@ -196,18 +196,19 @@ namespace DirectSelling
             {
                 saleCon.Open();
                 DataTable dt = new DataTable();
-                adapt = new SqlDataAdapter("Select Month, saleId as SaleID, cusId as CusID, proId as ProdID, " +
-                    "Qty, Comp as Company, Name, Profit from saleTB where Month = '" + month + "' order by Month ASC", saleCon);
+                adapt = new SqlDataAdapter("Select Month, cusId as CusID, proId as ProdID, " +
+                    "Qty, Comp as Company, Name, Profit from saleTB where Month = '" + month + "' " +
+                    "order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc", saleCon);
                 adapt.Fill(dt);
                 gVSales.DataSource = dt;
-                double balTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value));
+                double balTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[6].Value));
                 tbSaleTot.Text = balTot.ToString();
                 saleCon.Close();
 
                 penalCon.Open();
                 DataTable dt2 = new DataTable();
                 adapt = new SqlDataAdapter("Select ordId as OrdID, cusId as CusID, DateOrd, DateRecv, DateDead, curBal as CurrentBal, penalDate as DatePenal, penalty as Penalty, newBal as NewBal from penaltyTB " +
-                    "where month = '" + month + "' order by month ASC, ordId ASC", penalCon);
+                    "where month = '" + month + "' and penalty != 0 order by month ASC, ordId ASC", penalCon);
                 adapt.Fill(dt2);
                 gVPenal.DataSource = dt2;
                 penalCon.Close();
@@ -228,11 +229,11 @@ namespace DirectSelling
             {
                 saleCon.Open();
                 DataTable dt = new DataTable();
-                adapt = new SqlDataAdapter("Select Month, saleId as SaleID, cusId as CusID, proId as ProdID, " +
-                    "Qty, Comp as Company, Name, Profit from saleTB order by Month ASC", saleCon);          
+                adapt = new SqlDataAdapter("Select Month, cusId as CusID, proId as ProdID, " +
+                    "Qty, Comp as Company, Name, Profit from saleTB order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc", saleCon);          
                 adapt.Fill(dt);
                 gVSales.DataSource = dt;            
-                double balTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value));
+                double balTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[6].Value));
                 tbSaleTot.Text = balTot.ToString();
                 saleCon.Close();
 
@@ -240,7 +241,7 @@ namespace DirectSelling
                 DataTable dt2 = new DataTable();
                 adapt = new SqlDataAdapter("Select ordId as OrdID, cusId as CusID, " +
                     "DateDead, curBal as CurrentBal, penalDate as DatePenal, " +
-                    "penalty as Penalty, newBal as NewBal from penaltyTB ", penalCon);
+                    "penalty as Penalty, newBal as NewBal from penaltyTB where penalty != 0 ", penalCon);
                 adapt.Fill(dt2);
                 gVPenal.DataSource = dt2;
                 penalCon.Close();
@@ -298,7 +299,8 @@ namespace DirectSelling
             {
                 saleCon.Open();
                 DataTable dt = new DataTable();
-                adapt = new SqlDataAdapter("Select Month, SUM(Cast(Profit as float)) as Profit from saleTB group by Month", saleCon);
+                adapt = new SqlDataAdapter("Select Month, SUM(Cast(Profit as float)) as Profit from saleTB group by Month " +
+                    "order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc", saleCon);
                 adapt.Fill(dt);
                 gVHomeSale.DataSource = dt;
                 saleCon.Close();
@@ -2925,6 +2927,18 @@ namespace DirectSelling
             {
                 return;
             }
+        }
+
+        private void cbNewCusCount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show("Please select from Selection!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            e.Handled = true;
+        }
+
+        private void cbNewProdBrand_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show("Please select from Selection!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            e.Handled = true;
         }
     }
 }

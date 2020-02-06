@@ -282,5 +282,11 @@ namespace DirectSelling
                 tb.Text = Char.ToUpper(tb.Text[0]) + tb.Text.Substring(1);
             }
         }
+
+        private void cbOrdComp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show("Please select from Selection!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            e.Handled = true;
+        }
     }
 }

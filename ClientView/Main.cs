@@ -135,8 +135,13 @@ namespace ClientView
                 adapt.Fill(dt4);
                 gVPay.DataSource = dt4;
 
-                detCon.Close();
+                DataTable dt5 = new DataTable();
+                adapt = new SqlDataAdapter("Select ordId as OrdID, DateRecv, DateDead as DueDate, curBal as CurrentBal, penalDate as DatePenal, penalty as Penalty, newBal as NewBal from penaltyTB " +
+                    "where cusId = '" + cusId + "' and penalty != 0 order by month ASC, ordId ASC", detCon);
+                adapt.Fill(dt5);
+                gVPenal.DataSource = dt5;
 
+                detCon.Close();
             }
             catch (Exception e)
             {
@@ -236,6 +241,5 @@ namespace ClientView
         {
             Process.Start("https://www.linkedin.com/in/emmanuel-rebaño/");
         }
-
     }
 }

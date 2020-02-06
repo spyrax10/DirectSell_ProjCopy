@@ -53,18 +53,33 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminDash));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnFB = new System.Windows.Forms.Button();
+            this.btnLink = new System.Windows.Forms.Button();
+            this.btnTwit = new System.Windows.Forms.Button();
+            this.btnSet = new System.Windows.Forms.Button();
+            this.btnRes = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.panelSlide = new System.Windows.Forms.Panel();
+            this.btnCusAdd = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.btnNewProd = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.btnSales = new System.Windows.Forms.Button();
+            this.btnCusInfo = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
             this.paneSet = new System.Windows.Forms.Panel();
             this.tbSetPass = new System.Windows.Forms.TextBox();
             this.label99 = new System.Windows.Forms.Label();
             this.tbSetUser = new System.Windows.Forms.TextBox();
             this.label98 = new System.Windows.Forms.Label();
+            this.btnSetSave = new System.Windows.Forms.Button();
             this.tbPCost = new System.Windows.Forms.TextBox();
             this.label97 = new System.Windows.Forms.Label();
             this.label96 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.panelSlide = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHome = new System.Windows.Forms.TabPage();
             this.paneHome = new System.Windows.Forms.Panel();
@@ -131,6 +146,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.tbOrdId = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.btnOrdDel = new System.Windows.Forms.Button();
             this.gbNewOrdInfo = new System.Windows.Forms.GroupBox();
             this.lblOrdId = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
@@ -143,6 +159,7 @@
             this.tbOrdQty = new System.Windows.Forms.TextBox();
             this.tbOrdSize = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.btnClr = new System.Windows.Forms.Button();
             this.btnAddOrd = new System.Windows.Forms.Button();
             this.tbOrdBrand = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -159,6 +176,8 @@
             this.cbOrdMonth = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabNewPro = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnDelProd = new System.Windows.Forms.Button();
             this.tbSerProd = new System.Windows.Forms.TextBox();
             this.gVNewProd = new System.Windows.Forms.DataGridView();
             this.gBNewProd = new System.Windows.Forms.GroupBox();
@@ -173,6 +192,7 @@
             this.tbNewProdQty = new System.Windows.Forms.TextBox();
             this.tbNewProdSize = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.btnNewProdClr = new System.Windows.Forms.Button();
             this.btnNewProdAdd = new System.Windows.Forms.Button();
             this.tbNewProdName = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -188,7 +208,9 @@
             this.paneCusInfo = new System.Windows.Forms.Panel();
             this.paneUpCus = new System.Windows.Forms.Panel();
             this.tbUpCusId = new System.Windows.Forms.TextBox();
+            this.btnCusUpd = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnCusMin = new System.Windows.Forms.Button();
             this.label43 = new System.Windows.Forms.Label();
             this.tbUpCusLast = new System.Windows.Forms.TextBox();
             this.tbUpCusMob = new System.Windows.Forms.TextBox();
@@ -232,9 +254,11 @@
             this.label60 = new System.Windows.Forms.Label();
             this.gVPenOrd = new System.Windows.Forms.DataGridView();
             this.btnWDraw = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tbSerCus = new System.Windows.Forms.TextBox();
             this.gVCusInfo = new System.Windows.Forms.DataGridView();
             this.tabReceipt = new System.Windows.Forms.TabPage();
+            this.btnPayRe = new System.Windows.Forms.Button();
             this.tbPaySlip = new System.Windows.Forms.TextBox();
             this.gVPResc = new System.Windows.Forms.DataGridView();
             this.label94 = new System.Windows.Forms.Label();
@@ -244,7 +268,11 @@
             this.gVOResc = new System.Windows.Forms.DataGridView();
             this.tbCashSlip = new System.Windows.Forms.TextBox();
             this.gVResc = new System.Windows.Forms.DataGridView();
+            this.btnOrdRe = new System.Windows.Forms.Button();
+            this.btnCashRe = new System.Windows.Forms.Button();
             this.tabSales = new System.Windows.Forms.TabPage();
+            this.btnPenalPrint = new System.Windows.Forms.Button();
+            this.btnSalePrint = new System.Windows.Forms.Button();
             this.gVPenal = new System.Windows.Forms.DataGridView();
             this.label90 = new System.Windows.Forms.Label();
             this.label89 = new System.Windows.Forms.Label();
@@ -253,7 +281,9 @@
             this.label72 = new System.Windows.Forms.Label();
             this.cbSaleMonth = new System.Windows.Forms.ComboBox();
             this.gVSales = new System.Windows.Forms.DataGridView();
+            this.btnRe = new System.Windows.Forms.Button();
             this.tabOrder = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.gbOrderBr = new System.Windows.Forms.GroupBox();
             this.tbBrTotal = new System.Windows.Forms.TextBox();
             this.tbBrDateDue = new System.Windows.Forms.TextBox();
@@ -297,6 +327,7 @@
             this.label85 = new System.Windows.Forms.Label();
             this.lblPayCusId = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
+            this.btnPayPrint = new System.Windows.Forms.Button();
             this.gVPaySlip = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -321,40 +352,9 @@
             this.printBalPay = new System.Drawing.Printing.PrintDocument();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyCusIdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnOrdDel = new System.Windows.Forms.Button();
-            this.btnClr = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnDelProd = new System.Windows.Forms.Button();
-            this.btnNewProdClr = new System.Windows.Forms.Button();
-            this.btnCusUpd = new System.Windows.Forms.Button();
-            this.btnCusMin = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnPayRe = new System.Windows.Forms.Button();
-            this.btnOrdRe = new System.Windows.Forms.Button();
-            this.btnCashRe = new System.Windows.Forms.Button();
-            this.btnPenalPrint = new System.Windows.Forms.Button();
-            this.btnSalePrint = new System.Windows.Forms.Button();
-            this.btnRe = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnPayPrint = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnFB = new System.Windows.Forms.Button();
-            this.btnLink = new System.Windows.Forms.Button();
-            this.btnTwit = new System.Windows.Forms.Button();
-            this.btnSet = new System.Windows.Forms.Button();
-            this.btnRes = new System.Windows.Forms.Button();
-            this.btnCusAdd = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.btnNewProd = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnPay = new System.Windows.Forms.Button();
-            this.btnSales = new System.Windows.Forms.Button();
-            this.btnCusInfo = new System.Windows.Forms.Button();
-            this.btnOrder = new System.Windows.Forms.Button();
-            this.btnSetSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.paneSet.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.paneSet.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabHome.SuspendLayout();
             this.paneHome.SuspendLayout();
@@ -436,6 +436,297 @@
             this.panel1.Size = new System.Drawing.Size(236, 691);
             this.panel1.TabIndex = 4;
             // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = global::DirectSelling.Properties.Resources.Home_icon;
+            this.button4.Location = new System.Drawing.Point(204, 93);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(27, 27);
+            this.button4.TabIndex = 104;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnFB
+            // 
+            this.btnFB.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnFB.FlatAppearance.BorderSize = 0;
+            this.btnFB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnFB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFB.Image = global::DirectSelling.Properties.Resources.social_facebook_box_blue_icon;
+            this.btnFB.Location = new System.Drawing.Point(149, 663);
+            this.btnFB.Name = "btnFB";
+            this.btnFB.Size = new System.Drawing.Size(22, 23);
+            this.btnFB.TabIndex = 103;
+            this.btnFB.UseVisualStyleBackColor = true;
+            this.btnFB.Click += new System.EventHandler(this.btnFB_Click);
+            // 
+            // btnLink
+            // 
+            this.btnLink.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnLink.FlatAppearance.BorderSize = 0;
+            this.btnLink.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnLink.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLink.Image = global::DirectSelling.Properties.Resources.linkedin_icon;
+            this.btnLink.Location = new System.Drawing.Point(203, 663);
+            this.btnLink.Name = "btnLink";
+            this.btnLink.Size = new System.Drawing.Size(22, 23);
+            this.btnLink.TabIndex = 102;
+            this.btnLink.UseVisualStyleBackColor = true;
+            this.btnLink.Click += new System.EventHandler(this.btnLink_Click);
+            // 
+            // btnTwit
+            // 
+            this.btnTwit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTwit.FlatAppearance.BorderSize = 0;
+            this.btnTwit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnTwit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnTwit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTwit.Image = global::DirectSelling.Properties.Resources.twitter_icon;
+            this.btnTwit.Location = new System.Drawing.Point(176, 663);
+            this.btnTwit.Name = "btnTwit";
+            this.btnTwit.Size = new System.Drawing.Size(22, 23);
+            this.btnTwit.TabIndex = 101;
+            this.btnTwit.UseVisualStyleBackColor = true;
+            this.btnTwit.Click += new System.EventHandler(this.btnTwit_Click);
+            // 
+            // btnSet
+            // 
+            this.btnSet.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSet.Image = global::DirectSelling.Properties.Resources.Settings_icon;
+            this.btnSet.Location = new System.Drawing.Point(4, 93);
+            this.btnSet.Name = "btnSet";
+            this.btnSet.Size = new System.Drawing.Size(27, 27);
+            this.btnSet.TabIndex = 9;
+            this.btnSet.UseVisualStyleBackColor = true;
+            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
+            // 
+            // btnRes
+            // 
+            this.btnRes.BackColor = System.Drawing.Color.White;
+            this.btnRes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRes.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnRes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnRes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRes.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRes.Image = global::DirectSelling.Properties.Resources.folder_invoices_icon;
+            this.btnRes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRes.Location = new System.Drawing.Point(19, 486);
+            this.btnRes.Name = "btnRes";
+            this.btnRes.Size = new System.Drawing.Size(212, 54);
+            this.btnRes.TabIndex = 6;
+            this.btnRes.Text = "RECEIPT LIST";
+            this.btnRes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRes.UseVisualStyleBackColor = false;
+            this.btnRes.Click += new System.EventHandler(this.btnRes_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblDate);
+            this.panel2.Controls.Add(this.lblTime);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(234, 88);
+            this.panel2.TabIndex = 7;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblDate.Location = new System.Drawing.Point(15, 48);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(57, 16);
+            this.lblDate.TabIndex = 9;
+            this.lblDate.Text = "label18";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(10, 15);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(178, 33);
+            this.lblTime.TabIndex = 8;
+            this.lblTime.Text = "0:00:00 A.M";
+            // 
+            // panelSlide
+            // 
+            this.panelSlide.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panelSlide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelSlide.Location = new System.Drawing.Point(9, 126);
+            this.panelSlide.Name = "panelSlide";
+            this.panelSlide.Size = new System.Drawing.Size(10, 54);
+            this.panelSlide.TabIndex = 0;
+            // 
+            // btnCusAdd
+            // 
+            this.btnCusAdd.BackColor = System.Drawing.Color.White;
+            this.btnCusAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCusAdd.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnCusAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCusAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCusAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCusAdd.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCusAdd.Image = global::DirectSelling.Properties.Resources.add_user_icon;
+            this.btnCusAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCusAdd.Location = new System.Drawing.Point(19, 426);
+            this.btnCusAdd.Name = "btnCusAdd";
+            this.btnCusAdd.Size = new System.Drawing.Size(212, 54);
+            this.btnCusAdd.TabIndex = 5;
+            this.btnCusAdd.Text = "NEW CUSTOMER";
+            this.btnCusAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCusAdd.UseVisualStyleBackColor = false;
+            this.btnCusAdd.Click += new System.EventHandler(this.btnCusAdd_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Image = global::DirectSelling.Properties.Resources.Log_Out_icon;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(3, 647);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(40, 39);
+            this.button7.TabIndex = 8;
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // btnNewProd
+            // 
+            this.btnNewProd.BackColor = System.Drawing.Color.White;
+            this.btnNewProd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNewProd.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnNewProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnNewProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnNewProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewProd.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewProd.Image = global::DirectSelling.Properties.Resources.Shopping_basket_add_icon;
+            this.btnNewProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewProd.Location = new System.Drawing.Point(19, 246);
+            this.btnNewProd.Name = "btnNewProd";
+            this.btnNewProd.Size = new System.Drawing.Size(212, 54);
+            this.btnNewProd.TabIndex = 2;
+            this.btnNewProd.Text = "PRODUCT LIST";
+            this.btnNewProd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNewProd.UseVisualStyleBackColor = false;
+            this.btnNewProd.Click += new System.EventHandler(this.btnCusList_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.White;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Image = global::DirectSelling.Properties.Resources.One_storied_house_icon;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(19, 126);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(212, 54);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "HOMEPAGE";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnPay
+            // 
+            this.btnPay.BackColor = System.Drawing.Color.White;
+            this.btnPay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPay.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnPay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnPay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPay.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPay.Image = global::DirectSelling.Properties.Resources.payment_icon;
+            this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPay.Location = new System.Drawing.Point(19, 546);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.Size = new System.Drawing.Size(212, 54);
+            this.btnPay.TabIndex = 7;
+            this.btnPay.Text = "BALANCE PAYMENT";
+            this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
+            // btnSales
+            // 
+            this.btnSales.BackColor = System.Drawing.Color.White;
+            this.btnSales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSales.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnSales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSales.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSales.Image = global::DirectSelling.Properties.Resources.Column_Chart_icon;
+            this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSales.Location = new System.Drawing.Point(19, 306);
+            this.btnSales.Name = "btnSales";
+            this.btnSales.Size = new System.Drawing.Size(212, 54);
+            this.btnSales.TabIndex = 3;
+            this.btnSales.Text = "SALES and PENALTY REPORT";
+            this.btnSales.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSales.UseVisualStyleBackColor = false;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
+            // 
+            // btnCusInfo
+            // 
+            this.btnCusInfo.BackColor = System.Drawing.Color.White;
+            this.btnCusInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCusInfo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnCusInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCusInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCusInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCusInfo.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCusInfo.Image = global::DirectSelling.Properties.Resources.user_info_icon;
+            this.btnCusInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCusInfo.Location = new System.Drawing.Point(19, 366);
+            this.btnCusInfo.Name = "btnCusInfo";
+            this.btnCusInfo.Size = new System.Drawing.Size(212, 54);
+            this.btnCusInfo.TabIndex = 4;
+            this.btnCusInfo.Text = "CUSTOMER\'S INFO";
+            this.btnCusInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCusInfo.UseVisualStyleBackColor = false;
+            this.btnCusInfo.Click += new System.EventHandler(this.btnCusInfo_Click);
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.White;
+            this.btnOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrder.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Century", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.Image = global::DirectSelling.Properties.Resources.checklist_icon;
+            this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrder.Location = new System.Drawing.Point(19, 186);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(212, 54);
+            this.btnOrder.TabIndex = 1;
+            this.btnOrder.Text = "ORDER LIST";
+            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
             // paneSet
             // 
             this.paneSet.BackColor = System.Drawing.Color.White;
@@ -497,6 +788,24 @@
             this.label98.TabIndex = 78;
             this.label98.Text = "Username:";
             // 
+            // btnSetSave
+            // 
+            this.btnSetSave.BackColor = System.Drawing.Color.White;
+            this.btnSetSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSetSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSetSave.FlatAppearance.BorderSize = 0;
+            this.btnSetSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSetSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSetSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetSave.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetSave.Image = global::DirectSelling.Properties.Resources.Programming_Save_icon;
+            this.btnSetSave.Location = new System.Drawing.Point(171, 99);
+            this.btnSetSave.Name = "btnSetSave";
+            this.btnSetSave.Size = new System.Drawing.Size(33, 36);
+            this.btnSetSave.TabIndex = 77;
+            this.btnSetSave.UseVisualStyleBackColor = false;
+            this.btnSetSave.Click += new System.EventHandler(this.btnSetSave_Click);
+            // 
             // tbPCost
             // 
             this.tbPCost.BackColor = System.Drawing.Color.White;
@@ -529,49 +838,6 @@
             this.label96.Size = new System.Drawing.Size(83, 20);
             this.label96.TabIndex = 0;
             this.label96.Text = "Settings:";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lblDate);
-            this.panel2.Controls.Add(this.lblTime);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(234, 88);
-            this.panel2.TabIndex = 7;
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblDate.Location = new System.Drawing.Point(15, 48);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(57, 16);
-            this.lblDate.TabIndex = 9;
-            this.lblDate.Text = "label18";
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(10, 15);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(178, 33);
-            this.lblTime.TabIndex = 8;
-            this.lblTime.Text = "0:00:00 A.M";
-            // 
-            // panelSlide
-            // 
-            this.panelSlide.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panelSlide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSlide.Location = new System.Drawing.Point(9, 126);
-            this.panelSlide.Name = "panelSlide";
-            this.panelSlide.Size = new System.Drawing.Size(10, 54);
-            this.panelSlide.TabIndex = 0;
             // 
             // tabControl1
             // 
@@ -1104,6 +1370,7 @@
             this.cbNewCusBar.Name = "cbNewCusBar";
             this.cbNewCusBar.Size = new System.Drawing.Size(155, 24);
             this.cbNewCusBar.TabIndex = 68;
+            this.cbNewCusBar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // tbNewCusHou
             // 
@@ -1136,6 +1403,7 @@
             this.cbNewCusMun.Size = new System.Drawing.Size(155, 24);
             this.cbNewCusMun.TabIndex = 67;
             this.cbNewCusMun.SelectedIndexChanged += new System.EventHandler(this.cbNewCusMun_SelectedIndexChanged);
+            this.cbNewCusMun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // label4
             // 
@@ -1160,6 +1428,7 @@
             this.cbNewCusPro.Size = new System.Drawing.Size(155, 24);
             this.cbNewCusPro.TabIndex = 66;
             this.cbNewCusPro.SelectedIndexChanged += new System.EventHandler(this.cbNewCusPro_SelectedIndexChanged);
+            this.cbNewCusPro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // label17
             // 
@@ -1184,6 +1453,7 @@
             this.cbNewCusCount.Size = new System.Drawing.Size(155, 24);
             this.cbNewCusCount.TabIndex = 65;
             this.cbNewCusCount.SelectedIndexChanged += new System.EventHandler(this.cbNewCusCount_SelectedIndexChanged);
+            this.cbNewCusCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // label20
             // 
@@ -1449,6 +1719,24 @@
             this.label22.TabIndex = 60;
             this.label22.Text = "Transaction #:";
             // 
+            // btnOrdDel
+            // 
+            this.btnOrdDel.BackColor = System.Drawing.Color.White;
+            this.btnOrdDel.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnOrdDel.FlatAppearance.BorderSize = 0;
+            this.btnOrdDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnOrdDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnOrdDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrdDel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrdDel.ForeColor = System.Drawing.Color.Black;
+            this.btnOrdDel.Image = global::DirectSelling.Properties.Resources.Actions_trash_empty_icon;
+            this.btnOrdDel.Location = new System.Drawing.Point(459, 451);
+            this.btnOrdDel.Name = "btnOrdDel";
+            this.btnOrdDel.Size = new System.Drawing.Size(39, 39);
+            this.btnOrdDel.TabIndex = 73;
+            this.btnOrdDel.UseVisualStyleBackColor = false;
+            this.btnOrdDel.Click += new System.EventHandler(this.btnOrdDel_Click);
+            // 
             // gbNewOrdInfo
             // 
             this.gbNewOrdInfo.BackColor = System.Drawing.Color.White;
@@ -1602,6 +1890,25 @@
             this.label15.TabIndex = 75;
             this.label15.Text = "Name:";
             // 
+            // btnClr
+            // 
+            this.btnClr.BackColor = System.Drawing.Color.White;
+            this.btnClr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClr.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnClr.FlatAppearance.BorderSize = 0;
+            this.btnClr.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnClr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClr.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClr.ForeColor = System.Drawing.Color.Black;
+            this.btnClr.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon1;
+            this.btnClr.Location = new System.Drawing.Point(289, 11);
+            this.btnClr.Name = "btnClr";
+            this.btnClr.Size = new System.Drawing.Size(30, 25);
+            this.btnClr.TabIndex = 83;
+            this.btnClr.UseVisualStyleBackColor = false;
+            this.btnClr.Click += new System.EventHandler(this.btnClr_Click);
+            // 
             // btnAddOrd
             // 
             this.btnAddOrd.BackColor = System.Drawing.Color.White;
@@ -1670,6 +1977,7 @@
             this.cbOrdCat.Name = "cbOrdCat";
             this.cbOrdCat.Size = new System.Drawing.Size(193, 24);
             this.cbOrdCat.TabIndex = 72;
+            this.cbOrdCat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // tbOrdName
             // 
@@ -1746,6 +2054,7 @@
             this.cbOrdComp.Name = "cbOrdComp";
             this.cbOrdComp.Size = new System.Drawing.Size(193, 24);
             this.cbOrdComp.TabIndex = 71;
+            this.cbOrdComp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // label28
             // 
@@ -1780,6 +2089,7 @@
             this.cbOrdMonth.Name = "cbOrdMonth";
             this.cbOrdMonth.Size = new System.Drawing.Size(98, 24);
             this.cbOrdMonth.TabIndex = 73;
+            this.cbOrdMonth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // label5
             // 
@@ -1807,6 +2117,43 @@
             this.tabNewPro.TabIndex = 3;
             this.tabNewPro.Text = "New Product";
             this.tabNewPro.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
+            this.button1.Location = new System.Drawing.Point(211, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(26, 27);
+            this.button1.TabIndex = 18;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnDelProd
+            // 
+            this.btnDelProd.BackColor = System.Drawing.Color.White;
+            this.btnDelProd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelProd.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnDelProd.FlatAppearance.BorderSize = 0;
+            this.btnDelProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnDelProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDelProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelProd.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelProd.ForeColor = System.Drawing.Color.Black;
+            this.btnDelProd.Image = global::DirectSelling.Properties.Resources.Actions_trash_empty_icon;
+            this.btnDelProd.Location = new System.Drawing.Point(1071, 264);
+            this.btnDelProd.Name = "btnDelProd";
+            this.btnDelProd.Size = new System.Drawing.Size(25, 32);
+            this.btnDelProd.TabIndex = 31;
+            this.btnDelProd.UseVisualStyleBackColor = false;
+            this.btnDelProd.Click += new System.EventHandler(this.btnDelProd_Click);
             // 
             // tbSerProd
             // 
@@ -1995,6 +2342,24 @@
             this.label18.TabIndex = 75;
             this.label18.Text = "Name:";
             // 
+            // btnNewProdClr
+            // 
+            this.btnNewProdClr.BackColor = System.Drawing.Color.White;
+            this.btnNewProdClr.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnNewProdClr.FlatAppearance.BorderSize = 0;
+            this.btnNewProdClr.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnNewProdClr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnNewProdClr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewProdClr.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewProdClr.ForeColor = System.Drawing.Color.Black;
+            this.btnNewProdClr.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon1;
+            this.btnNewProdClr.Location = new System.Drawing.Point(339, 13);
+            this.btnNewProdClr.Name = "btnNewProdClr";
+            this.btnNewProdClr.Size = new System.Drawing.Size(21, 21);
+            this.btnNewProdClr.TabIndex = 30;
+            this.btnNewProdClr.UseVisualStyleBackColor = false;
+            this.btnNewProdClr.Click += new System.EventHandler(this.btnNewProdClr_Click);
+            // 
             // btnNewProdAdd
             // 
             this.btnNewProdAdd.BackColor = System.Drawing.Color.White;
@@ -2061,6 +2426,7 @@
             this.cbNewProdCat.Name = "cbNewProdCat";
             this.cbNewProdCat.Size = new System.Drawing.Size(211, 24);
             this.cbNewProdCat.TabIndex = 21;
+            this.cbNewProdCat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewProdBrand_KeyPress);
             // 
             // tbNewProdInfo
             // 
@@ -2128,6 +2494,7 @@
             this.cbNewProdBrand.Name = "cbNewProdBrand";
             this.cbNewProdBrand.Size = new System.Drawing.Size(211, 24);
             this.cbNewProdBrand.TabIndex = 20;
+            this.cbNewProdBrand.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewProdBrand_KeyPress);
             // 
             // tabCusInfo
             // 
@@ -2183,6 +2550,23 @@
             this.tbUpCusId.Size = new System.Drawing.Size(118, 27);
             this.tbUpCusId.TabIndex = 35;
             // 
+            // btnCusUpd
+            // 
+            this.btnCusUpd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCusUpd.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnCusUpd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCusUpd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCusUpd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCusUpd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCusUpd.ForeColor = System.Drawing.Color.Black;
+            this.btnCusUpd.Image = global::DirectSelling.Properties.Resources.user_add_icon;
+            this.btnCusUpd.Location = new System.Drawing.Point(285, 415);
+            this.btnCusUpd.Name = "btnCusUpd";
+            this.btnCusUpd.Size = new System.Drawing.Size(37, 36);
+            this.btnCusUpd.TabIndex = 57;
+            this.btnCusUpd.UseVisualStyleBackColor = true;
+            this.btnCusUpd.Click += new System.EventHandler(this.btnCusUpd_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnCusMin);
@@ -2206,6 +2590,21 @@
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Update Information:";
+            // 
+            // btnCusMin
+            // 
+            this.btnCusMin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCusMin.FlatAppearance.BorderSize = 0;
+            this.btnCusMin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCusMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCusMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCusMin.Image = global::DirectSelling.Properties.Resources.minimize_icon;
+            this.btnCusMin.Location = new System.Drawing.Point(287, 11);
+            this.btnCusMin.Name = "btnCusMin";
+            this.btnCusMin.Size = new System.Drawing.Size(22, 23);
+            this.btnCusMin.TabIndex = 58;
+            this.btnCusMin.UseVisualStyleBackColor = true;
+            this.btnCusMin.Click += new System.EventHandler(this.btnCusMin_Click);
             // 
             // label43
             // 
@@ -2785,6 +3184,24 @@
             this.btnWDraw.UseVisualStyleBackColor = true;
             this.btnWDraw.Click += new System.EventHandler(this.btnWDraw_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
+            this.button2.Location = new System.Drawing.Point(172, 606);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(26, 27);
+            this.button2.TabIndex = 40;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // tbSerCus
             // 
             this.tbSerCus.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2846,6 +3263,25 @@
             this.tabReceipt.TabIndex = 5;
             this.tabReceipt.Text = "Receipt List";
             this.tabReceipt.UseVisualStyleBackColor = true;
+            // 
+            // btnPayRe
+            // 
+            this.btnPayRe.BackColor = System.Drawing.Color.White;
+            this.btnPayRe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPayRe.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPayRe.FlatAppearance.BorderSize = 0;
+            this.btnPayRe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnPayRe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnPayRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayRe.ForeColor = System.Drawing.Color.Black;
+            this.btnPayRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
+            this.btnPayRe.Location = new System.Drawing.Point(866, 9);
+            this.btnPayRe.Name = "btnPayRe";
+            this.btnPayRe.Size = new System.Drawing.Size(26, 27);
+            this.btnPayRe.TabIndex = 93;
+            this.btnPayRe.UseVisualStyleBackColor = false;
+            this.btnPayRe.Click += new System.EventHandler(this.btnPayRe_Click);
             // 
             // tbPaySlip
             // 
@@ -2991,6 +3427,44 @@
             this.gVResc.Size = new System.Drawing.Size(593, 286);
             this.gVResc.TabIndex = 87;
             // 
+            // btnOrdRe
+            // 
+            this.btnOrdRe.BackColor = System.Drawing.Color.White;
+            this.btnOrdRe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrdRe.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnOrdRe.FlatAppearance.BorderSize = 0;
+            this.btnOrdRe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnOrdRe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnOrdRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrdRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrdRe.ForeColor = System.Drawing.Color.Black;
+            this.btnOrdRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
+            this.btnOrdRe.Location = new System.Drawing.Point(380, 334);
+            this.btnOrdRe.Name = "btnOrdRe";
+            this.btnOrdRe.Size = new System.Drawing.Size(26, 27);
+            this.btnOrdRe.TabIndex = 88;
+            this.btnOrdRe.UseVisualStyleBackColor = false;
+            this.btnOrdRe.Click += new System.EventHandler(this.btnOrdRe_Click);
+            // 
+            // btnCashRe
+            // 
+            this.btnCashRe.BackColor = System.Drawing.Color.White;
+            this.btnCashRe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCashRe.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCashRe.FlatAppearance.BorderSize = 0;
+            this.btnCashRe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCashRe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCashRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCashRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCashRe.ForeColor = System.Drawing.Color.Black;
+            this.btnCashRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
+            this.btnCashRe.Location = new System.Drawing.Point(380, 9);
+            this.btnCashRe.Name = "btnCashRe";
+            this.btnCashRe.Size = new System.Drawing.Size(26, 27);
+            this.btnCashRe.TabIndex = 85;
+            this.btnCashRe.UseVisualStyleBackColor = false;
+            this.btnCashRe.Click += new System.EventHandler(this.btnCashRe_Click);
+            // 
             // tabSales
             // 
             this.tabSales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -3012,6 +3486,42 @@
             this.tabSales.TabIndex = 6;
             this.tabSales.Text = "Sales & Penalty Report";
             this.tabSales.UseVisualStyleBackColor = true;
+            // 
+            // btnPenalPrint
+            // 
+            this.btnPenalPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPenalPrint.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnPenalPrint.FlatAppearance.BorderSize = 2;
+            this.btnPenalPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnPenalPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnPenalPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPenalPrint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPenalPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnPenalPrint.Image = global::DirectSelling.Properties.Resources.print_icon;
+            this.btnPenalPrint.Location = new System.Drawing.Point(1056, 620);
+            this.btnPenalPrint.Name = "btnPenalPrint";
+            this.btnPenalPrint.Size = new System.Drawing.Size(35, 35);
+            this.btnPenalPrint.TabIndex = 37;
+            this.btnPenalPrint.UseVisualStyleBackColor = true;
+            this.btnPenalPrint.Click += new System.EventHandler(this.btnPenalPrint_Click);
+            // 
+            // btnSalePrint
+            // 
+            this.btnSalePrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalePrint.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnSalePrint.FlatAppearance.BorderSize = 2;
+            this.btnSalePrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSalePrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSalePrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalePrint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalePrint.ForeColor = System.Drawing.Color.Black;
+            this.btnSalePrint.Image = global::DirectSelling.Properties.Resources.print_icon;
+            this.btnSalePrint.Location = new System.Drawing.Point(6, 15);
+            this.btnSalePrint.Name = "btnSalePrint";
+            this.btnSalePrint.Size = new System.Drawing.Size(35, 35);
+            this.btnSalePrint.TabIndex = 35;
+            this.btnSalePrint.UseVisualStyleBackColor = true;
+            this.btnSalePrint.Click += new System.EventHandler(this.btnSalePrint_Click);
             // 
             // gVPenal
             // 
@@ -3140,6 +3650,25 @@
             this.gVSales.Size = new System.Drawing.Size(1085, 249);
             this.gVSales.TabIndex = 34;
             // 
+            // btnRe
+            // 
+            this.btnRe.BackColor = System.Drawing.Color.White;
+            this.btnRe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRe.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnRe.FlatAppearance.BorderSize = 0;
+            this.btnRe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnRe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRe.ForeColor = System.Drawing.Color.Black;
+            this.btnRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
+            this.btnRe.Location = new System.Drawing.Point(1063, 16);
+            this.btnRe.Name = "btnRe";
+            this.btnRe.Size = new System.Drawing.Size(26, 23);
+            this.btnRe.TabIndex = 33;
+            this.btnRe.UseVisualStyleBackColor = false;
+            this.btnRe.Click += new System.EventHandler(this.btnRe_Click);
+            // 
             // tabOrder
             // 
             this.tabOrder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -3157,6 +3686,24 @@
             this.tabOrder.TabIndex = 7;
             this.tabOrder.Text = "Order List";
             this.tabOrder.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Image = global::DirectSelling.Properties.Resources.print_icon;
+            this.button3.Location = new System.Drawing.Point(1070, 298);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(33, 31);
+            this.button3.TabIndex = 83;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // gbOrderBr
             // 
@@ -3683,6 +4230,24 @@
             this.label84.TabIndex = 99;
             this.label84.Text = "Customer ID:";
             // 
+            // btnPayPrint
+            // 
+            this.btnPayPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPayPrint.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnPayPrint.FlatAppearance.BorderSize = 2;
+            this.btnPayPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnPayPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnPayPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayPrint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnPayPrint.Image = global::DirectSelling.Properties.Resources.print_icon;
+            this.btnPayPrint.Location = new System.Drawing.Point(493, 3);
+            this.btnPayPrint.Name = "btnPayPrint";
+            this.btnPayPrint.Size = new System.Drawing.Size(32, 32);
+            this.btnPayPrint.TabIndex = 95;
+            this.btnPayPrint.UseVisualStyleBackColor = true;
+            this.btnPayPrint.Click += new System.EventHandler(this.btnPayPrint_Click);
+            // 
             // gVPaySlip
             // 
             this.gVPaySlip.AllowUserToAddRows = false;
@@ -3969,562 +4534,6 @@
             this.copyCusIdToolStripMenuItem.Text = "Copy Customer ID";
             this.copyCusIdToolStripMenuItem.Click += new System.EventHandler(this.copyCusIdToolStripMenuItem_Click);
             // 
-            // btnOrdDel
-            // 
-            this.btnOrdDel.BackColor = System.Drawing.Color.White;
-            this.btnOrdDel.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnOrdDel.FlatAppearance.BorderSize = 0;
-            this.btnOrdDel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnOrdDel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnOrdDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrdDel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdDel.ForeColor = System.Drawing.Color.Black;
-            this.btnOrdDel.Image = global::DirectSelling.Properties.Resources.Actions_trash_empty_icon;
-            this.btnOrdDel.Location = new System.Drawing.Point(459, 451);
-            this.btnOrdDel.Name = "btnOrdDel";
-            this.btnOrdDel.Size = new System.Drawing.Size(39, 39);
-            this.btnOrdDel.TabIndex = 73;
-            this.btnOrdDel.UseVisualStyleBackColor = false;
-            this.btnOrdDel.Click += new System.EventHandler(this.btnOrdDel_Click);
-            // 
-            // btnClr
-            // 
-            this.btnClr.BackColor = System.Drawing.Color.White;
-            this.btnClr.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClr.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnClr.FlatAppearance.BorderSize = 0;
-            this.btnClr.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnClr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnClr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClr.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClr.ForeColor = System.Drawing.Color.Black;
-            this.btnClr.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon1;
-            this.btnClr.Location = new System.Drawing.Point(289, 11);
-            this.btnClr.Name = "btnClr";
-            this.btnClr.Size = new System.Drawing.Size(30, 25);
-            this.btnClr.TabIndex = 83;
-            this.btnClr.UseVisualStyleBackColor = false;
-            this.btnClr.Click += new System.EventHandler(this.btnClr_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
-            this.button1.Location = new System.Drawing.Point(211, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 27);
-            this.button1.TabIndex = 18;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnDelProd
-            // 
-            this.btnDelProd.BackColor = System.Drawing.Color.White;
-            this.btnDelProd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelProd.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnDelProd.FlatAppearance.BorderSize = 0;
-            this.btnDelProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnDelProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnDelProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelProd.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelProd.ForeColor = System.Drawing.Color.Black;
-            this.btnDelProd.Image = global::DirectSelling.Properties.Resources.Actions_trash_empty_icon;
-            this.btnDelProd.Location = new System.Drawing.Point(1071, 264);
-            this.btnDelProd.Name = "btnDelProd";
-            this.btnDelProd.Size = new System.Drawing.Size(25, 32);
-            this.btnDelProd.TabIndex = 31;
-            this.btnDelProd.UseVisualStyleBackColor = false;
-            this.btnDelProd.Click += new System.EventHandler(this.btnDelProd_Click);
-            // 
-            // btnNewProdClr
-            // 
-            this.btnNewProdClr.BackColor = System.Drawing.Color.White;
-            this.btnNewProdClr.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnNewProdClr.FlatAppearance.BorderSize = 0;
-            this.btnNewProdClr.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnNewProdClr.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnNewProdClr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewProdClr.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewProdClr.ForeColor = System.Drawing.Color.Black;
-            this.btnNewProdClr.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon1;
-            this.btnNewProdClr.Location = new System.Drawing.Point(339, 13);
-            this.btnNewProdClr.Name = "btnNewProdClr";
-            this.btnNewProdClr.Size = new System.Drawing.Size(21, 21);
-            this.btnNewProdClr.TabIndex = 30;
-            this.btnNewProdClr.UseVisualStyleBackColor = false;
-            this.btnNewProdClr.Click += new System.EventHandler(this.btnNewProdClr_Click);
-            // 
-            // btnCusUpd
-            // 
-            this.btnCusUpd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCusUpd.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnCusUpd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnCusUpd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnCusUpd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCusUpd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCusUpd.ForeColor = System.Drawing.Color.Black;
-            this.btnCusUpd.Image = global::DirectSelling.Properties.Resources.user_add_icon;
-            this.btnCusUpd.Location = new System.Drawing.Point(285, 415);
-            this.btnCusUpd.Name = "btnCusUpd";
-            this.btnCusUpd.Size = new System.Drawing.Size(37, 36);
-            this.btnCusUpd.TabIndex = 57;
-            this.btnCusUpd.UseVisualStyleBackColor = true;
-            this.btnCusUpd.Click += new System.EventHandler(this.btnCusUpd_Click);
-            // 
-            // btnCusMin
-            // 
-            this.btnCusMin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCusMin.FlatAppearance.BorderSize = 0;
-            this.btnCusMin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnCusMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCusMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCusMin.Image = global::DirectSelling.Properties.Resources.minimize_icon;
-            this.btnCusMin.Location = new System.Drawing.Point(287, 11);
-            this.btnCusMin.Name = "btnCusMin";
-            this.btnCusMin.Size = new System.Drawing.Size(22, 23);
-            this.btnCusMin.TabIndex = 58;
-            this.btnCusMin.UseVisualStyleBackColor = true;
-            this.btnCusMin.Click += new System.EventHandler(this.btnCusMin_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
-            this.button2.Location = new System.Drawing.Point(172, 606);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(26, 27);
-            this.button2.TabIndex = 40;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnPayRe
-            // 
-            this.btnPayRe.BackColor = System.Drawing.Color.White;
-            this.btnPayRe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPayRe.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnPayRe.FlatAppearance.BorderSize = 0;
-            this.btnPayRe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnPayRe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnPayRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayRe.ForeColor = System.Drawing.Color.Black;
-            this.btnPayRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
-            this.btnPayRe.Location = new System.Drawing.Point(866, 9);
-            this.btnPayRe.Name = "btnPayRe";
-            this.btnPayRe.Size = new System.Drawing.Size(26, 27);
-            this.btnPayRe.TabIndex = 93;
-            this.btnPayRe.UseVisualStyleBackColor = false;
-            this.btnPayRe.Click += new System.EventHandler(this.btnPayRe_Click);
-            // 
-            // btnOrdRe
-            // 
-            this.btnOrdRe.BackColor = System.Drawing.Color.White;
-            this.btnOrdRe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOrdRe.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnOrdRe.FlatAppearance.BorderSize = 0;
-            this.btnOrdRe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnOrdRe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnOrdRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrdRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdRe.ForeColor = System.Drawing.Color.Black;
-            this.btnOrdRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
-            this.btnOrdRe.Location = new System.Drawing.Point(380, 334);
-            this.btnOrdRe.Name = "btnOrdRe";
-            this.btnOrdRe.Size = new System.Drawing.Size(26, 27);
-            this.btnOrdRe.TabIndex = 88;
-            this.btnOrdRe.UseVisualStyleBackColor = false;
-            this.btnOrdRe.Click += new System.EventHandler(this.btnOrdRe_Click);
-            // 
-            // btnCashRe
-            // 
-            this.btnCashRe.BackColor = System.Drawing.Color.White;
-            this.btnCashRe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCashRe.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCashRe.FlatAppearance.BorderSize = 0;
-            this.btnCashRe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnCashRe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnCashRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCashRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCashRe.ForeColor = System.Drawing.Color.Black;
-            this.btnCashRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
-            this.btnCashRe.Location = new System.Drawing.Point(380, 9);
-            this.btnCashRe.Name = "btnCashRe";
-            this.btnCashRe.Size = new System.Drawing.Size(26, 27);
-            this.btnCashRe.TabIndex = 85;
-            this.btnCashRe.UseVisualStyleBackColor = false;
-            this.btnCashRe.Click += new System.EventHandler(this.btnCashRe_Click);
-            // 
-            // btnPenalPrint
-            // 
-            this.btnPenalPrint.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPenalPrint.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnPenalPrint.FlatAppearance.BorderSize = 2;
-            this.btnPenalPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnPenalPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnPenalPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPenalPrint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPenalPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnPenalPrint.Image = global::DirectSelling.Properties.Resources.print_icon;
-            this.btnPenalPrint.Location = new System.Drawing.Point(1056, 620);
-            this.btnPenalPrint.Name = "btnPenalPrint";
-            this.btnPenalPrint.Size = new System.Drawing.Size(35, 35);
-            this.btnPenalPrint.TabIndex = 37;
-            this.btnPenalPrint.UseVisualStyleBackColor = true;
-            this.btnPenalPrint.Click += new System.EventHandler(this.btnPenalPrint_Click);
-            // 
-            // btnSalePrint
-            // 
-            this.btnSalePrint.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalePrint.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnSalePrint.FlatAppearance.BorderSize = 2;
-            this.btnSalePrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnSalePrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSalePrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalePrint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalePrint.ForeColor = System.Drawing.Color.Black;
-            this.btnSalePrint.Image = global::DirectSelling.Properties.Resources.print_icon;
-            this.btnSalePrint.Location = new System.Drawing.Point(6, 15);
-            this.btnSalePrint.Name = "btnSalePrint";
-            this.btnSalePrint.Size = new System.Drawing.Size(35, 35);
-            this.btnSalePrint.TabIndex = 35;
-            this.btnSalePrint.UseVisualStyleBackColor = true;
-            this.btnSalePrint.Click += new System.EventHandler(this.btnSalePrint_Click);
-            // 
-            // btnRe
-            // 
-            this.btnRe.BackColor = System.Drawing.Color.White;
-            this.btnRe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRe.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnRe.FlatAppearance.BorderSize = 0;
-            this.btnRe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnRe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRe.ForeColor = System.Drawing.Color.Black;
-            this.btnRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
-            this.btnRe.Location = new System.Drawing.Point(1063, 16);
-            this.btnRe.Name = "btnRe";
-            this.btnRe.Size = new System.Drawing.Size(26, 23);
-            this.btnRe.TabIndex = 33;
-            this.btnRe.UseVisualStyleBackColor = false;
-            this.btnRe.Click += new System.EventHandler(this.btnRe_Click);
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::DirectSelling.Properties.Resources.print_icon;
-            this.button3.Location = new System.Drawing.Point(1070, 298);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 31);
-            this.button3.TabIndex = 83;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnPayPrint
-            // 
-            this.btnPayPrint.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPayPrint.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnPayPrint.FlatAppearance.BorderSize = 2;
-            this.btnPayPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnPayPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnPayPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayPrint.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnPayPrint.Image = global::DirectSelling.Properties.Resources.print_icon;
-            this.btnPayPrint.Location = new System.Drawing.Point(493, 3);
-            this.btnPayPrint.Name = "btnPayPrint";
-            this.btnPayPrint.Size = new System.Drawing.Size(32, 32);
-            this.btnPayPrint.TabIndex = 95;
-            this.btnPayPrint.UseVisualStyleBackColor = true;
-            this.btnPayPrint.Click += new System.EventHandler(this.btnPayPrint_Click);
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = global::DirectSelling.Properties.Resources.Home_icon;
-            this.button4.Location = new System.Drawing.Point(204, 93);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(27, 27);
-            this.button4.TabIndex = 104;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btnFB
-            // 
-            this.btnFB.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnFB.FlatAppearance.BorderSize = 0;
-            this.btnFB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnFB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFB.Image = global::DirectSelling.Properties.Resources.social_facebook_box_blue_icon;
-            this.btnFB.Location = new System.Drawing.Point(149, 663);
-            this.btnFB.Name = "btnFB";
-            this.btnFB.Size = new System.Drawing.Size(22, 23);
-            this.btnFB.TabIndex = 103;
-            this.btnFB.UseVisualStyleBackColor = true;
-            this.btnFB.Click += new System.EventHandler(this.btnFB_Click);
-            // 
-            // btnLink
-            // 
-            this.btnLink.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLink.FlatAppearance.BorderSize = 0;
-            this.btnLink.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnLink.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLink.Image = global::DirectSelling.Properties.Resources.linkedin_icon;
-            this.btnLink.Location = new System.Drawing.Point(203, 663);
-            this.btnLink.Name = "btnLink";
-            this.btnLink.Size = new System.Drawing.Size(22, 23);
-            this.btnLink.TabIndex = 102;
-            this.btnLink.UseVisualStyleBackColor = true;
-            this.btnLink.Click += new System.EventHandler(this.btnLink_Click);
-            // 
-            // btnTwit
-            // 
-            this.btnTwit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTwit.FlatAppearance.BorderSize = 0;
-            this.btnTwit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnTwit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnTwit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTwit.Image = global::DirectSelling.Properties.Resources.twitter_icon;
-            this.btnTwit.Location = new System.Drawing.Point(176, 663);
-            this.btnTwit.Name = "btnTwit";
-            this.btnTwit.Size = new System.Drawing.Size(22, 23);
-            this.btnTwit.TabIndex = 101;
-            this.btnTwit.UseVisualStyleBackColor = true;
-            this.btnTwit.Click += new System.EventHandler(this.btnTwit_Click);
-            // 
-            // btnSet
-            // 
-            this.btnSet.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSet.Image = global::DirectSelling.Properties.Resources.Settings_icon;
-            this.btnSet.Location = new System.Drawing.Point(4, 93);
-            this.btnSet.Name = "btnSet";
-            this.btnSet.Size = new System.Drawing.Size(27, 27);
-            this.btnSet.TabIndex = 9;
-            this.btnSet.UseVisualStyleBackColor = true;
-            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
-            // 
-            // btnRes
-            // 
-            this.btnRes.BackColor = System.Drawing.Color.White;
-            this.btnRes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRes.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnRes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnRes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRes.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRes.Image = global::DirectSelling.Properties.Resources.folder_invoices_icon;
-            this.btnRes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRes.Location = new System.Drawing.Point(19, 486);
-            this.btnRes.Name = "btnRes";
-            this.btnRes.Size = new System.Drawing.Size(212, 54);
-            this.btnRes.TabIndex = 6;
-            this.btnRes.Text = "RECEIPT LIST";
-            this.btnRes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRes.UseVisualStyleBackColor = false;
-            this.btnRes.Click += new System.EventHandler(this.btnRes_Click);
-            // 
-            // btnCusAdd
-            // 
-            this.btnCusAdd.BackColor = System.Drawing.Color.White;
-            this.btnCusAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCusAdd.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnCusAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnCusAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnCusAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCusAdd.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCusAdd.Image = global::DirectSelling.Properties.Resources.add_user_icon;
-            this.btnCusAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCusAdd.Location = new System.Drawing.Point(19, 426);
-            this.btnCusAdd.Name = "btnCusAdd";
-            this.btnCusAdd.Size = new System.Drawing.Size(212, 54);
-            this.btnCusAdd.TabIndex = 5;
-            this.btnCusAdd.Text = "NEW CUSTOMER";
-            this.btnCusAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCusAdd.UseVisualStyleBackColor = false;
-            this.btnCusAdd.Click += new System.EventHandler(this.btnCusAdd_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Image = global::DirectSelling.Properties.Resources.Log_Out_icon;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(3, 647);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(40, 39);
-            this.button7.TabIndex = 8;
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // btnNewProd
-            // 
-            this.btnNewProd.BackColor = System.Drawing.Color.White;
-            this.btnNewProd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNewProd.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnNewProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnNewProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnNewProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewProd.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewProd.Image = global::DirectSelling.Properties.Resources.Shopping_basket_add_icon;
-            this.btnNewProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewProd.Location = new System.Drawing.Point(19, 246);
-            this.btnNewProd.Name = "btnNewProd";
-            this.btnNewProd.Size = new System.Drawing.Size(212, 54);
-            this.btnNewProd.TabIndex = 2;
-            this.btnNewProd.Text = "PRODUCT LIST";
-            this.btnNewProd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNewProd.UseVisualStyleBackColor = false;
-            this.btnNewProd.Click += new System.EventHandler(this.btnCusList_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.White;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Image = global::DirectSelling.Properties.Resources.One_storied_house_icon;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(19, 126);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(212, 54);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "HOMEPAGE";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // btnPay
-            // 
-            this.btnPay.BackColor = System.Drawing.Color.White;
-            this.btnPay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPay.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnPay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnPay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPay.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.Image = global::DirectSelling.Properties.Resources.payment_icon;
-            this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPay.Location = new System.Drawing.Point(19, 546);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(212, 54);
-            this.btnPay.TabIndex = 7;
-            this.btnPay.Text = "BALANCE PAYMENT";
-            this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPay.UseVisualStyleBackColor = false;
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
-            // 
-            // btnSales
-            // 
-            this.btnSales.BackColor = System.Drawing.Color.White;
-            this.btnSales.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSales.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnSales.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnSales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSales.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSales.Image = global::DirectSelling.Properties.Resources.Column_Chart_icon;
-            this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSales.Location = new System.Drawing.Point(19, 306);
-            this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(212, 54);
-            this.btnSales.TabIndex = 3;
-            this.btnSales.Text = "SALES and PENALTY REPORT";
-            this.btnSales.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSales.UseVisualStyleBackColor = false;
-            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
-            // 
-            // btnCusInfo
-            // 
-            this.btnCusInfo.BackColor = System.Drawing.Color.White;
-            this.btnCusInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCusInfo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnCusInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnCusInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnCusInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCusInfo.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCusInfo.Image = global::DirectSelling.Properties.Resources.user_info_icon;
-            this.btnCusInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCusInfo.Location = new System.Drawing.Point(19, 366);
-            this.btnCusInfo.Name = "btnCusInfo";
-            this.btnCusInfo.Size = new System.Drawing.Size(212, 54);
-            this.btnCusInfo.TabIndex = 4;
-            this.btnCusInfo.Text = "CUSTOMER\'S INFO";
-            this.btnCusInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCusInfo.UseVisualStyleBackColor = false;
-            this.btnCusInfo.Click += new System.EventHandler(this.btnCusInfo_Click);
-            // 
-            // btnOrder
-            // 
-            this.btnOrder.BackColor = System.Drawing.Color.White;
-            this.btnOrder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOrder.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.Font = new System.Drawing.Font("Century", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrder.Image = global::DirectSelling.Properties.Resources.checklist_icon;
-            this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.Location = new System.Drawing.Point(19, 186);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(212, 54);
-            this.btnOrder.TabIndex = 1;
-            this.btnOrder.Text = "ORDER LIST";
-            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOrder.UseVisualStyleBackColor = false;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
-            // 
-            // btnSetSave
-            // 
-            this.btnSetSave.BackColor = System.Drawing.Color.White;
-            this.btnSetSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSetSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSetSave.FlatAppearance.BorderSize = 0;
-            this.btnSetSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnSetSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSetSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetSave.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetSave.Image = global::DirectSelling.Properties.Resources.Programming_Save_icon;
-            this.btnSetSave.Location = new System.Drawing.Point(171, 99);
-            this.btnSetSave.Name = "btnSetSave";
-            this.btnSetSave.Size = new System.Drawing.Size(33, 36);
-            this.btnSetSave.TabIndex = 77;
-            this.btnSetSave.UseVisualStyleBackColor = false;
-            this.btnSetSave.Click += new System.EventHandler(this.btnSetSave_Click);
-            // 
             // adminDash
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -4541,10 +4550,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.adminDash_FormClosing);
             this.Load += new System.EventHandler(this.adminDash_Load);
             this.panel1.ResumeLayout(false);
-            this.paneSet.ResumeLayout(false);
-            this.paneSet.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.paneSet.ResumeLayout(false);
+            this.paneSet.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabHome.ResumeLayout(false);
             this.paneHome.ResumeLayout(false);

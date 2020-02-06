@@ -363,6 +363,7 @@
             this.cbOrdCat.Name = "cbOrdCat";
             this.cbOrdCat.Size = new System.Drawing.Size(193, 24);
             this.cbOrdCat.TabIndex = 1;
+            this.cbOrdCat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbOrdComp_KeyPress);
             // 
             // tbOrdName
             // 
@@ -444,6 +445,7 @@
             this.cbOrdComp.Name = "cbOrdComp";
             this.cbOrdComp.Size = new System.Drawing.Size(193, 24);
             this.cbOrdComp.TabIndex = 0;
+            this.cbOrdComp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbOrdComp_KeyPress);
             // 
             // label28
             // 
@@ -479,6 +481,7 @@
             this.cbOrdMonth.Name = "cbOrdMonth";
             this.cbOrdMonth.Size = new System.Drawing.Size(98, 24);
             this.cbOrdMonth.TabIndex = 2;
+            this.cbOrdMonth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbOrdComp_KeyPress);
             // 
             // label5
             // 
