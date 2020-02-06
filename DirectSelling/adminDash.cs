@@ -2819,7 +2819,10 @@ namespace DirectSelling
         private void btnSet_Click(object sender, EventArgs e)
         {
             if (paneSet.Visible == false)
+            {
                 paneSet.Visible = true;
+                paneSet.BringToFront();
+            }
             else
                 paneSet.Visible = false;
             loadSet();

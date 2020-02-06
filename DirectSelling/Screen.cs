@@ -27,7 +27,7 @@ namespace DirectSelling
         public static string Id;
 
         string prodcs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=sellDB;Integrated Security=True";
-        string councs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=countDB;Integrated Security=True";
+       
 
 
         public Screen()
@@ -1046,6 +1046,14 @@ namespace DirectSelling
             {
                 cusId();
             }
+        }
+
+        private void btnOut_Click(object sender, EventArgs e)
+        {
+            paneLogo.Visible = false;
+            gbOrdCusId.Visible = false;
+            gBTrans.Visible = true;
+            btnShut.Visible = true;
         }
     }
 }

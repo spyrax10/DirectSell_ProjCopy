@@ -134,6 +134,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.printCash = new System.Drawing.Printing.PrintDocument();
+            this.btnOut = new System.Windows.Forms.Button();
             this.paneScreen.SuspendLayout();
             this.paneLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -156,8 +157,8 @@
             this.paneScreen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.paneScreen.Controls.Add(this.btnShut);
             this.paneScreen.Controls.Add(this.paneLogo);
-            this.paneScreen.Controls.Add(this.gBTrans);
             this.paneScreen.Controls.Add(this.paneCash);
+            this.paneScreen.Controls.Add(this.gBTrans);
             this.paneScreen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paneScreen.Location = new System.Drawing.Point(12, 12);
             this.paneScreen.Name = "paneScreen";
@@ -339,6 +340,7 @@
             // gbOrdCusId
             // 
             this.gbOrdCusId.BackColor = System.Drawing.Color.White;
+            this.gbOrdCusId.Controls.Add(this.btnOut);
             this.gbOrdCusId.Controls.Add(this.tbOrdCusID);
             this.gbOrdCusId.Controls.Add(this.btnOrdHome);
             this.gbOrdCusId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1402,6 +1404,19 @@
             // 
             this.printCash.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printCash_PrintPage);
             // 
+            // btnOut
+            // 
+            this.btnOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOut.FlatAppearance.BorderSize = 0;
+            this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOut.Image = global::DirectSelling.Properties.Resources.Button_Close_icon_16_;
+            this.btnOut.Location = new System.Drawing.Point(305, 13);
+            this.btnOut.Name = "btnOut";
+            this.btnOut.Size = new System.Drawing.Size(22, 23);
+            this.btnOut.TabIndex = 106;
+            this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
+            // 
             // Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1544,6 +1559,7 @@
         private System.Windows.Forms.Label lblSaleID;
         private System.Windows.Forms.Label lblCusProdID;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOut;
     }
 }
 
