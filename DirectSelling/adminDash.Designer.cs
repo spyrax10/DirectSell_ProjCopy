@@ -2698,6 +2698,7 @@
             this.cbUpCusSex.Name = "cbUpCusSex";
             this.cbUpCusSex.Size = new System.Drawing.Size(43, 24);
             this.cbUpCusSex.TabIndex = 49;
+            this.cbUpCusSex.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // label46
             // 
@@ -2736,6 +2737,7 @@
             this.cbUpCusStat.Name = "cbUpCusStat";
             this.cbUpCusStat.Size = new System.Drawing.Size(117, 24);
             this.cbUpCusStat.TabIndex = 50;
+            this.cbUpCusStat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // label48
             // 
@@ -2792,6 +2794,7 @@
             this.cbUpCusBar.Name = "cbUpCusBar";
             this.cbUpCusBar.Size = new System.Drawing.Size(155, 24);
             this.cbUpCusBar.TabIndex = 55;
+            this.cbUpCusBar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // tbUpCusHou
             // 
@@ -2827,6 +2830,7 @@
             this.cbUpCusMun.Size = new System.Drawing.Size(155, 24);
             this.cbUpCusMun.TabIndex = 54;
             this.cbUpCusMun.SelectedIndexChanged += new System.EventHandler(this.cbUpCusMun_SelectedIndexChanged);
+            this.cbUpCusMun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // label51
             // 
@@ -2852,6 +2856,7 @@
             this.cbUpCusPro.Size = new System.Drawing.Size(155, 24);
             this.cbUpCusPro.TabIndex = 53;
             this.cbUpCusPro.SelectedIndexChanged += new System.EventHandler(this.cbUpCusPro_SelectedIndexChanged);
+            this.cbUpCusPro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // label52
             // 
@@ -2877,6 +2882,7 @@
             this.cbUpCusCoun.Size = new System.Drawing.Size(155, 24);
             this.cbUpCusCoun.TabIndex = 52;
             this.cbUpCusCoun.SelectedIndexChanged += new System.EventHandler(this.cbUpCusCoun_SelectedIndexChanged);
+            this.cbUpCusCoun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbNewCusCount_KeyPress);
             // 
             // label53
             // 
@@ -3285,13 +3291,14 @@
             // 
             // tbPaySlip
             // 
-            this.tbPaySlip.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPaySlip.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tbPaySlip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPaySlip.ForeColor = System.Drawing.Color.Gray;
             this.tbPaySlip.Location = new System.Drawing.Point(898, 9);
             this.tbPaySlip.Name = "tbPaySlip";
             this.tbPaySlip.Size = new System.Drawing.Size(193, 27);
             this.tbPaySlip.TabIndex = 94;
-            this.tbPaySlip.Text = "Search Here";
+            this.tbPaySlip.Text = "SEARCH HERE";
             this.tbPaySlip.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbPaySlip_MouseClick);
             this.tbPaySlip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPaySlip_KeyPress);
             // 
@@ -3327,9 +3334,9 @@
             this.label94.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label94.Location = new System.Drawing.Point(611, 8);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(124, 32);
+            this.label94.Size = new System.Drawing.Size(232, 32);
             this.label94.TabIndex = 91;
-            this.label94.Text = "Pay Slip:";
+            this.label94.Text = "Payment History:";
             // 
             // label70
             // 
@@ -3355,13 +3362,14 @@
             // 
             // tbOrdSlip
             // 
-            this.tbOrdSlip.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbOrdSlip.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tbOrdSlip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbOrdSlip.ForeColor = System.Drawing.Color.Gray;
             this.tbOrdSlip.Location = new System.Drawing.Point(412, 334);
             this.tbOrdSlip.Name = "tbOrdSlip";
             this.tbOrdSlip.Size = new System.Drawing.Size(193, 27);
             this.tbOrdSlip.TabIndex = 89;
-            this.tbOrdSlip.Text = "Search Here";
+            this.tbOrdSlip.Text = "SEARCH HERE";
             this.tbOrdSlip.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbOrdSlip_MouseClick);
             this.tbOrdSlip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbOrdSlip_KeyPress);
             // 
@@ -3392,13 +3400,14 @@
             // 
             // tbCashSlip
             // 
-            this.tbCashSlip.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCashSlip.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tbCashSlip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCashSlip.ForeColor = System.Drawing.Color.Gray;
             this.tbCashSlip.Location = new System.Drawing.Point(412, 9);
             this.tbCashSlip.Name = "tbCashSlip";
             this.tbCashSlip.Size = new System.Drawing.Size(193, 27);
             this.tbCashSlip.TabIndex = 86;
-            this.tbCashSlip.Text = "Search Here";
+            this.tbCashSlip.Text = "SEARCH HERE";
             this.tbCashSlip.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbCashSlip_MouseClick);
             this.tbCashSlip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCashSlip_KeyPress);
             // 
@@ -3861,9 +3870,9 @@
             this.btnOrdRecv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrdRecv.Location = new System.Drawing.Point(145, 6);
             this.btnOrdRecv.Name = "btnOrdRecv";
-            this.btnOrdRecv.Size = new System.Drawing.Size(87, 28);
+            this.btnOrdRecv.Size = new System.Drawing.Size(112, 28);
             this.btnOrdRecv.TabIndex = 14;
-            this.btnOrdRecv.Text = "RECEIVE";
+            this.btnOrdRecv.Text = "DISTRIBUTE";
             this.btnOrdRecv.UseVisualStyleBackColor = true;
             this.btnOrdRecv.Click += new System.EventHandler(this.btnOrdRecv_Click);
             // 
@@ -3874,9 +3883,9 @@
             this.label62.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label62.Location = new System.Drawing.Point(14, 348);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(108, 18);
+            this.label62.Size = new System.Drawing.Size(107, 18);
             this.label62.TabIndex = 80;
-            this.label62.Text = "Order Details:";
+            this.label62.Text = "Order History:";
             // 
             // label61
             // 
