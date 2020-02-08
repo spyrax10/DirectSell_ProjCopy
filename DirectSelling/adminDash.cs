@@ -317,6 +317,9 @@ namespace DirectSelling
             SqlConnection upCon = new SqlConnection(prodcs);
             SqlConnection chkCon = new SqlConnection(prodcs);
             SqlConnection costCon = new SqlConnection(prodcs);
+            SqlConnection insert = new SqlConnection(prodcs);
+            SqlConnection update = new SqlConnection(prodcs);
+            SqlConnection check = new SqlConnection(prodcs);
 
             string date = DateTime.Now.ToShortDateString();
             int nmonth = DateTime.Now.Month;
@@ -324,6 +327,7 @@ namespace DirectSelling
 
             try
             {
+
                 costCon.Open();
                 SqlCommand costCmd = costCon.CreateCommand();
                 costCmd.CommandType = CommandType.Text;
@@ -349,7 +353,7 @@ namespace DirectSelling
                         SqlCommand chkCmd = chkCon.CreateCommand();
                         chkCmd.CommandType = CommandType.Text;
                         chkCmd.CommandText = "Select * from penaltyTB " +
-                            "where ordId = '" + ordId + "' and penalDate = '" + date + "'";
+                            "where ordId = '" + ordId + "' and penalty != 0";
                         SqlDataReader cDr = chkCmd.ExecuteReader();
 
                         if (!cDr.Read())
@@ -392,6 +396,55 @@ namespace DirectSelling
                             upCmd.ExecuteNonQuery();
                             upCon.Close();
                         }
+                        else
+                        {
+                            string cus = (cDr["cusId"].ToString());
+                            string ord = (cDr["ordId"].ToString());
+                            string dOrd = (cDr["DateOrd"].ToString());
+                            string dRecv = (cDr["DateRecv"].ToString());
+                            string ordDue = (cDr["DateDead"].ToString());
+                            //string curBal = (cDr["curBal"].ToString());
+                            string penalty = (cDr["newBal"].ToString());
+                            double Fpenal = Double.Parse(penalty);
+                            double res = cost + Fpenal;
+                            string Fres = res.ToString();
+
+                            check.Open();
+                            SqlCommand cmd = check.CreateCommand();
+                            cmd.CommandType = CommandType.Text;
+                            cmd.CommandText = "Select * from penaltyTB where ordId = '" + ord + "' " +
+                                "and penalDate = '" + date + "'";
+                            SqlDataReader dr3 = cmd.ExecuteReader();
+
+                            if (!dr3.Read())
+                            {
+                                insert.Open();
+                                SqlCommand insCmd = insert.CreateCommand();
+                                insCmd.CommandType = CommandType.Text;
+                                insCmd.CommandText = "Insert into penaltyTB Values ('" + month + "', " +
+                                    "'" + ord + "', " +
+                                    "'" + cus + "', " +
+                                    "'" + dOrd + "', " +
+                                    "'" + dRecv + "', " +
+                                    "'" + ordDue + "', " +
+                                    "'" + penalty + "', " +
+                                    "'" + date + "', " +
+                                    "'" + cost.ToString() + "', " +
+                                    "'" + Fres + "')";
+                                insCmd.ExecuteNonQuery();
+                                insert.Close();
+
+                                update.Open();
+                                SqlCommand upCmd = update.CreateCommand();
+                                upCmd.CommandType = CommandType.Text;
+                                upCmd.CommandText = "Update cusBalTB set prodBal = '" + Fres + "' " +
+                                    "where ordId = '" + ord + "'";
+                                upCmd.ExecuteNonQuery();
+                                update.Close();
+
+                            }
+
+                        }
 
                         chkCon.Close();
 
@@ -401,14 +454,14 @@ namespace DirectSelling
                 }
                 costCon.Close();
 
- 
+
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-      
+
         public void payCusId()
         {
             SqlConnection cusCon = new SqlConnection(prodcs);
@@ -767,6 +820,8 @@ namespace DirectSelling
         {
             SqlConnection minCon = new SqlConnection(prodcs);
             SqlConnection upCon = new SqlConnection(prodcs);
+            SqlConnection delCon = new SqlConnection(prodcs);
+            SqlConnection dispCon = new SqlConnection(prodcs);
 
             try
             {
@@ -791,20 +846,49 @@ namespace DirectSelling
                         "where cusId = '" + lblPayCusId.Text + "' and ordId = '" + tbPayOrdId.Text + "'";
                     upCmd.ExecuteNonQuery();
 
+                    if (newBal == 0)
+                    {
+                        delCon.Open();
+                        SqlCommand cmd = delCon.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "Delete from ordTB where ordId = '" + tbPayOrdId.Text + "' " +
+                            "and cusId = '" + lblPayCusId.Text + "'";
+                        cmd.ExecuteNonQuery();
+                        delCon.Close();
+                    }
+
+                    dispCon.Open();
+                    DataTable dt = new DataTable();
+                    adapt = new SqlDataAdapter("Select ordId as OrdID, Distrib as Company, Brand, Name, Qty, SRP, Total from ordTB " +
+                        "where cusId = '" + lblPayBalCus.Text + "'  and OrdStat = 'RECEIVED' " +
+                        "order by ordId DESC", dispCon);
+                    adapt.Fill(dt);
+                    gVPayBalDet.DataSource = dt;
+
+                    DataTable dt2 = new DataTable();
+                    adapt = new SqlDataAdapter("Select prodBal As Balance from cusBalTB " +
+                        "where cusId = '" + lblPayBalCus.Text + "' and prodBal != 0 order by ordId DESC", dispCon);
+                    adapt.Fill(dt2);
+                    gVPayBal.DataSource = dt2;
+                    dispCon.Close();
+
+                    double totCash = gVPayBal.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[0].Value));
+                    tbPayCusBal.Text = totCash.ToString();
                 }
                 minCon.Close();
+                upCon.Close();
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         public void slipPay()
         {
             SqlConnection payCon = new SqlConnection(prodcs);
             SqlConnection chkCon = new SqlConnection(prodcs);
             SqlConnection upCon = new SqlConnection(prodcs);
+            SqlConnection delCon = new SqlConnection(prodcs);
 
 
             string pre = "PAY";
@@ -814,7 +898,7 @@ namespace DirectSelling
             string date = lblDate.Text;
             string time = lblTime.Text;
             string balance = tbPayOrdBal.Text;
-      
+
             try
             {
                 int bal = Int32.Parse(tbPayOrdBal.Text);
@@ -858,7 +942,6 @@ namespace DirectSelling
                         double totCash = gVPaySlip.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[3].Value));
                         tbPayTot.Text = totCash.ToString();
                         minusBal();
-                        viewPayBalDet();
                         payCon.Close();
 
                         chkCon.Open();
@@ -873,20 +956,24 @@ namespace DirectSelling
                         upCmd.CommandType = CommandType.Text;
                         upCmd.CommandText = "Update cusBalTB Set latPayId = '" + lblSlipId.Text + "' where cusId = '" + cusId + "'";
                         upCmd.ExecuteNonQuery();
-
                         tbPayAmount.Text = "";
                         tbPayChange.Text = "";
+                        tbPayOrdId.Text = "";
+                        tbPayOrdBal.Text = "";
+                        lblPayOrdRev.Text = "00-00-0000";
+                        lblPayOrdDue.Text = "00-00-0000";
                     }
 
                 }
-               
+
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-       
+
+
         public void cellPay()
         {
             panePayNow.Visible = true;

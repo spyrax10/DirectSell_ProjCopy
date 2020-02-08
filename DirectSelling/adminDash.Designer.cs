@@ -3282,7 +3282,7 @@
             this.btnPayRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayRe.ForeColor = System.Drawing.Color.Black;
             this.btnPayRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
-            this.btnPayRe.Location = new System.Drawing.Point(866, 9);
+            this.btnPayRe.Location = new System.Drawing.Point(872, 335);
             this.btnPayRe.Name = "btnPayRe";
             this.btnPayRe.Size = new System.Drawing.Size(26, 27);
             this.btnPayRe.TabIndex = 93;
@@ -3294,7 +3294,7 @@
             this.tbPaySlip.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbPaySlip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPaySlip.ForeColor = System.Drawing.Color.Gray;
-            this.tbPaySlip.Location = new System.Drawing.Point(898, 9);
+            this.tbPaySlip.Location = new System.Drawing.Point(904, 335);
             this.tbPaySlip.Name = "tbPaySlip";
             this.tbPaySlip.Size = new System.Drawing.Size(193, 27);
             this.tbPaySlip.TabIndex = 94;
@@ -3311,7 +3311,7 @@
             this.gVPResc.BackgroundColor = System.Drawing.Color.White;
             this.gVPResc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gVPResc.GridColor = System.Drawing.Color.DodgerBlue;
-            this.gVPResc.Location = new System.Drawing.Point(617, 42);
+            this.gVPResc.Location = new System.Drawing.Point(12, 366);
             this.gVPResc.Name = "gVPResc";
             this.gVPResc.ReadOnly = true;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -3324,7 +3324,7 @@
             this.gVPResc.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.gVPResc.RowHeadersVisible = false;
             this.gVPResc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gVPResc.Size = new System.Drawing.Size(474, 610);
+            this.gVPResc.Size = new System.Drawing.Size(1085, 286);
             this.gVPResc.TabIndex = 92;
             // 
             // label94
@@ -3332,7 +3332,7 @@
             this.label94.AutoSize = true;
             this.label94.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label94.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label94.Location = new System.Drawing.Point(611, 8);
+            this.label94.Location = new System.Drawing.Point(6, 331);
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(232, 32);
             this.label94.TabIndex = 91;
@@ -3343,7 +3343,7 @@
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label70.Location = new System.Drawing.Point(6, 331);
+            this.label70.Location = new System.Drawing.Point(596, 3);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(151, 32);
             this.label70.TabIndex = 83;
@@ -3365,7 +3365,7 @@
             this.tbOrdSlip.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbOrdSlip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbOrdSlip.ForeColor = System.Drawing.Color.Gray;
-            this.tbOrdSlip.Location = new System.Drawing.Point(412, 334);
+            this.tbOrdSlip.Location = new System.Drawing.Point(905, 9);
             this.tbOrdSlip.Name = "tbOrdSlip";
             this.tbOrdSlip.Size = new System.Drawing.Size(193, 27);
             this.tbOrdSlip.TabIndex = 89;
@@ -3382,7 +3382,7 @@
             this.gVOResc.BackgroundColor = System.Drawing.Color.White;
             this.gVOResc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gVOResc.GridColor = System.Drawing.Color.DodgerBlue;
-            this.gVOResc.Location = new System.Drawing.Point(12, 366);
+            this.gVOResc.Location = new System.Drawing.Point(602, 42);
             this.gVOResc.Name = "gVOResc";
             this.gVOResc.ReadOnly = true;
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -3395,7 +3395,7 @@
             this.gVOResc.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.gVOResc.RowHeadersVisible = false;
             this.gVOResc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gVOResc.Size = new System.Drawing.Size(593, 286);
+            this.gVOResc.Size = new System.Drawing.Size(496, 286);
             this.gVOResc.TabIndex = 90;
             // 
             // tbCashSlip
@@ -3403,7 +3403,7 @@
             this.tbCashSlip.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbCashSlip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCashSlip.ForeColor = System.Drawing.Color.Gray;
-            this.tbCashSlip.Location = new System.Drawing.Point(412, 9);
+            this.tbCashSlip.Location = new System.Drawing.Point(403, 9);
             this.tbCashSlip.Name = "tbCashSlip";
             this.tbCashSlip.Size = new System.Drawing.Size(193, 27);
             this.tbCashSlip.TabIndex = 86;
@@ -3433,7 +3433,7 @@
             this.gVResc.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.gVResc.RowHeadersVisible = false;
             this.gVResc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gVResc.Size = new System.Drawing.Size(593, 286);
+            this.gVResc.Size = new System.Drawing.Size(584, 286);
             this.gVResc.TabIndex = 87;
             // 
             // btnOrdRe
@@ -3448,7 +3448,7 @@
             this.btnOrdRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdRe.ForeColor = System.Drawing.Color.Black;
             this.btnOrdRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
-            this.btnOrdRe.Location = new System.Drawing.Point(380, 334);
+            this.btnOrdRe.Location = new System.Drawing.Point(873, 9);
             this.btnOrdRe.Name = "btnOrdRe";
             this.btnOrdRe.Size = new System.Drawing.Size(26, 27);
             this.btnOrdRe.TabIndex = 88;
@@ -3467,7 +3467,7 @@
             this.btnCashRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCashRe.ForeColor = System.Drawing.Color.Black;
             this.btnCashRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
-            this.btnCashRe.Location = new System.Drawing.Point(380, 9);
+            this.btnCashRe.Location = new System.Drawing.Point(371, 9);
             this.btnCashRe.Name = "btnCashRe";
             this.btnCashRe.Size = new System.Drawing.Size(26, 27);
             this.btnCashRe.TabIndex = 85;
