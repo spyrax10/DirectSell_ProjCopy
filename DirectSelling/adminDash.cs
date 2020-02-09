@@ -126,7 +126,8 @@ namespace DirectSelling
 
                     DGVPrinter printer = new DGVPrinter();
                     printer.Title = "Sales Report" + Environment.NewLine;
-                    printer.SubTitle = "Date Printed: " + date + Environment.NewLine + Environment.NewLine + Environment.NewLine;
+                    printer.SubTitle = "Date Printed: " + date + Environment.NewLine + Environment.NewLine + Environment.NewLine +
+                        "Total Sales: " + tbSaleTot.Text + Environment.NewLine + Environment.NewLine + Environment.NewLine;
                     printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
                     printer.PageNumbers = true;
                     printer.PageNumberInHeader = false;
@@ -137,47 +138,46 @@ namespace DirectSelling
                     printer.FooterSpacing = 15;
                     printer.PrintSettings.PrintToFile = true;
                     printer.PrintDataGridView(gVSales);
-
                 }
                 else
                 {
-                    MessageBox.Show("Data Empty", " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-       
+
         public void penaltyPrint()
         {
-            
             string date = DateTime.Now.ToLongDateString();
             string time = DateTime.Now.ToLongTimeString();
             try
             {
                 if (gVPenal.Rows.Count != 0)
                 {
-         
+
                     DGVPrinter printer = new DGVPrinter();
                     printer.Title = "Penalty Report" + Environment.NewLine;
-                    printer.SubTitle = "Date Printed: " + date + Environment.NewLine + Environment.NewLine + Environment.NewLine;
+                    printer.SubTitle = "Date Printed: " + date + Environment.NewLine + Environment.NewLine + Environment.NewLine +
+                        "Total Penalty: " + tbPenalTot.Text + Environment.NewLine + Environment.NewLine + Environment.NewLine;
                     printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
                     printer.PageNumbers = true;
                     printer.PageNumberInHeader = false;
                     printer.PorportionalColumns = true;
-                    printer.HeaderCellAlignment = StringAlignment.Near;       
+                    printer.HeaderCellAlignment = StringAlignment.Near;
                     printer.Footer = "Time Printed: " + time;
                     printer.PageSettings.Landscape = true;
                     printer.FooterSpacing = 15;
                     printer.PrintSettings.PrintToFile = true;
                     printer.PrintDataGridView(gVPenal);
+
                 }
                 else
                 {
-                    MessageBox.Show("Data Empty", " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
             catch (Exception e)
@@ -185,7 +185,7 @@ namespace DirectSelling
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-       
+
         public void cbSale()
         {
             string month = cbSaleMonth.Text;
@@ -201,8 +201,6 @@ namespace DirectSelling
                     "order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc", saleCon);
                 adapt.Fill(dt);
                 gVSales.DataSource = dt;
-                double balTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[6].Value));
-                tbSaleTot.Text = balTot.ToString();
                 saleCon.Close();
 
                 penalCon.Open();
@@ -213,6 +211,10 @@ namespace DirectSelling
                 gVPenal.DataSource = dt2;
                 penalCon.Close();
 
+                double balTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[6].Value));
+                double penalTot = gVPenal.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value));
+                tbSaleTot.Text = balTot.ToString();
+                tbPenalTot.Text = penalTot.ToString();
             }
             catch (Exception e)
             {
@@ -233,8 +235,6 @@ namespace DirectSelling
                     "Qty, Comp as Company, Name, Profit from saleTB order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc", saleCon);          
                 adapt.Fill(dt);
                 gVSales.DataSource = dt;            
-                double balTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[6].Value));
-                tbSaleTot.Text = balTot.ToString();
                 saleCon.Close();
 
                 penalCon.Open();
@@ -310,6 +310,25 @@ namespace DirectSelling
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void delZero()
+        {
+            SqlConnection delCon = new SqlConnection(prodcs);
+
+            try
+            {
+                delCon.Open();
+                SqlCommand cmd = delCon.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Delete from penaltyTB where penalty = 0";
+                cmd.ExecuteNonQuery();
+                delCon.Close();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void penalty()
         {
             SqlConnection penalCon = new SqlConnection(prodcs);
@@ -327,7 +346,7 @@ namespace DirectSelling
 
             try
             {
-
+                
                 costCon.Open();
                 SqlCommand costCmd = costCon.CreateCommand();
                 costCmd.CommandType = CommandType.Text;
@@ -348,6 +367,12 @@ namespace DirectSelling
                     foreach (DataRow dr in dt.Rows)
                     {
                         string ordId = (dr["ordId"].ToString());
+                        string cusId = (dr["cusId"].ToString());
+                        string dueDate = (dr["ordDead"].ToString());
+                        string curBal = (dr["prodBal"].ToString());
+                        string dateOrd = (dr["DateOrd"].ToString());
+                        string dateRecv = (dr["ordRecv"].ToString());
+
 
                         chkCon.Open();
                         SqlCommand chkCmd = chkCon.CreateCommand();
@@ -358,12 +383,6 @@ namespace DirectSelling
 
                         if (!cDr.Read())
                         {
-
-                            string cusId = (dr["cusId"].ToString());
-                            string dueDate = (dr["ordDead"].ToString());
-                            string curBal = (dr["prodBal"].ToString());
-                            string dateOrd = (dr["DateOrd"].ToString());
-                            string dateRecv = (dr["ordRecv"].ToString());
 
                             DateTime due = DateTime.Parse(dueDate);
                             DateTime Ddate = DateTime.Parse(date);
@@ -403,9 +422,8 @@ namespace DirectSelling
                             string dOrd = (cDr["DateOrd"].ToString());
                             string dRecv = (cDr["DateRecv"].ToString());
                             string ordDue = (cDr["DateDead"].ToString());
-                            //string curBal = (cDr["curBal"].ToString());
                             string penalty = (cDr["newBal"].ToString());
-                            double Fpenal = Double.Parse(penalty);
+                            double Fpenal = Double.Parse(curBal);
                             double res = cost + Fpenal;
                             string Fres = res.ToString();
 
@@ -418,6 +436,7 @@ namespace DirectSelling
 
                             if (!dr3.Read())
                             {
+                               
                                 insert.Open();
                                 SqlCommand insCmd = insert.CreateCommand();
                                 insCmd.CommandType = CommandType.Text;
@@ -435,26 +454,21 @@ namespace DirectSelling
                                 insert.Close();
 
                                 update.Open();
-                                SqlCommand upCmd = update.CreateCommand();
-                                upCmd.CommandType = CommandType.Text;
-                                upCmd.CommandText = "Update cusBalTB set prodBal = '" + Fres + "' " +
+                                SqlCommand upCmd2 = update.CreateCommand();
+                                upCmd2.CommandType = CommandType.Text;
+                                upCmd2.CommandText = "Update cusBalTB set prodBal = '" + Fres + "' " +
                                     "where ordId = '" + ord + "'";
-                                upCmd.ExecuteNonQuery();
+                                upCmd2.ExecuteNonQuery();
                                 update.Close();
-
                             }
-
+                            check.Close();
                         }
-
                         chkCon.Close();
-
                     }
                     penalCon.Close();
-
+                    delZero();
                 }
                 costCon.Close();
-
-
             }
             catch (Exception e)
             {
@@ -816,13 +830,14 @@ namespace DirectSelling
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void minusBal()
+         public void minusBal()
         {
             SqlConnection minCon = new SqlConnection(prodcs);
             SqlConnection upCon = new SqlConnection(prodcs);
             SqlConnection delCon = new SqlConnection(prodcs);
             SqlConnection dispCon = new SqlConnection(prodcs);
-
+            SqlConnection con = new SqlConnection(prodcs);
+           
             try
             {
                 minCon.Open();
@@ -855,6 +870,14 @@ namespace DirectSelling
                             "and cusId = '" + lblPayCusId.Text + "'";
                         cmd.ExecuteNonQuery();
                         delCon.Close();
+
+                        con.Open();
+                        SqlCommand cmd2 = con.CreateCommand();
+                        cmd2.CommandType = CommandType.Text;
+                        cmd2.CommandText = "Delete from cusBalTB where ordId = '" + tbPayOrdId.Text + "' " +
+                            "and cusId = '" + lblPayCusId.Text + "'";
+                        cmd2.ExecuteNonQuery();
+                        con.Close();
                     }
 
                     dispCon.Open();
@@ -864,7 +887,7 @@ namespace DirectSelling
                         "order by ordId DESC", dispCon);
                     adapt.Fill(dt);
                     gVPayBalDet.DataSource = dt;
-
+                    
                     DataTable dt2 = new DataTable();
                     adapt = new SqlDataAdapter("Select prodBal As Balance from cusBalTB " +
                         "where cusId = '" + lblPayBalCus.Text + "' and prodBal != 0 order by ordId DESC", dispCon);
@@ -886,7 +909,6 @@ namespace DirectSelling
         public void slipPay()
         {
             SqlConnection payCon = new SqlConnection(prodcs);
-            SqlConnection chkCon = new SqlConnection(prodcs);
             SqlConnection upCon = new SqlConnection(prodcs);
             SqlConnection delCon = new SqlConnection(prodcs);
 
@@ -898,7 +920,7 @@ namespace DirectSelling
             string date = lblDate.Text;
             string time = lblTime.Text;
             string balance = tbPayOrdBal.Text;
-
+      
             try
             {
                 int bal = Int32.Parse(tbPayOrdBal.Text);
@@ -944,13 +966,6 @@ namespace DirectSelling
                         minusBal();
                         payCon.Close();
 
-                        chkCon.Open();
-                        SqlCommand chkCmd = chkCon.CreateCommand();
-                        chkCmd.CommandType = CommandType.Text;
-                        chkCmd.CommandText = "Delete from cusBalTB where prodBal = 0";
-                        chkCmd.ExecuteNonQuery();
-                        chkCon.Close();
-
                         upCon.Open();
                         SqlCommand upCmd = upCon.CreateCommand();
                         upCmd.CommandType = CommandType.Text;
@@ -965,14 +980,14 @@ namespace DirectSelling
                     }
 
                 }
-
+               
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+       
 
         public void cellPay()
         {
@@ -1133,7 +1148,7 @@ namespace DirectSelling
                 balCon.Open();
                 DataTable dt2 = new DataTable();
                 adapt = new SqlDataAdapter("Select prodBal As Balance from cusBalTB " +
-                    "where cusId = '" + cusId + "' order by ordId DESC", balCon);
+                    "where cusId = '" + cusId + "' and prodBal != 0 order by ordId DESC", balCon);
                 adapt.Fill(dt2);
                 gVBal.DataSource = dt2;
                 balCon.Close();
@@ -2239,6 +2254,10 @@ namespace DirectSelling
             cbSaleMonth.Text = null;
             saleRep();         
             tabControl1.TabPages.Insert(6, tabSales);
+            double balTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[6].Value));
+            double penalTot = gVPenal.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value));
+            tbSaleTot.Text = balTot.ToString();
+            tbPenalTot.Text = penalTot.ToString();
         }
 
         private void btnCusInfo_Click(object sender, EventArgs e)
@@ -3025,6 +3044,11 @@ namespace DirectSelling
         private void cbNewProdBrand_KeyPress(object sender, KeyPressEventArgs e)
         {
             MessageBox.Show("Please select from Selection!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            e.Handled = true;
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
             e.Handled = true;
         }
     }

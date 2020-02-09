@@ -104,7 +104,7 @@
             this.paneMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneMain.Location = new System.Drawing.Point(0, 0);
             this.paneMain.Name = "paneMain";
-            this.paneMain.Size = new System.Drawing.Size(857, 473);
+            this.paneMain.Size = new System.Drawing.Size(893, 473);
             this.paneMain.TabIndex = 0;
             // 
             // paneDet
@@ -133,7 +133,7 @@
             this.paneDet.ForeColor = System.Drawing.Color.Black;
             this.paneDet.Location = new System.Drawing.Point(0, 0);
             this.paneDet.Name = "paneDet";
-            this.paneDet.Size = new System.Drawing.Size(857, 473);
+            this.paneDet.Size = new System.Drawing.Size(893, 473);
             this.paneDet.TabIndex = 6;
             // 
             // gVPenal
@@ -162,7 +162,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gVPenal.DefaultCellStyle = dataGridViewCellStyle2;
             this.gVPenal.GridColor = System.Drawing.Color.DodgerBlue;
-            this.gVPenal.Location = new System.Drawing.Point(465, 320);
+            this.gVPenal.Location = new System.Drawing.Point(400, 320);
             this.gVPenal.Name = "gVPenal";
             this.gVPenal.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -175,7 +175,7 @@
             this.gVPenal.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gVPenal.RowHeadersVisible = false;
             this.gVPenal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gVPenal.Size = new System.Drawing.Size(387, 115);
+            this.gVPenal.Size = new System.Drawing.Size(481, 115);
             this.gVPenal.TabIndex = 102;
             // 
             // label10
@@ -183,7 +183,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Lime;
-            this.label10.Location = new System.Drawing.Point(721, 298);
+            this.label10.Location = new System.Drawing.Point(750, 298);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(131, 19);
             this.label10.TabIndex = 101;
@@ -195,7 +195,7 @@
             this.btnFB.FlatAppearance.BorderSize = 0;
             this.btnFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFB.Image = global::ClientView.Properties.Resources.social_facebook_box_blue_icon;
-            this.btnFB.Location = new System.Drawing.Point(777, 447);
+            this.btnFB.Location = new System.Drawing.Point(803, 447);
             this.btnFB.Name = "btnFB";
             this.btnFB.Size = new System.Drawing.Size(22, 23);
             this.btnFB.TabIndex = 100;
@@ -208,7 +208,7 @@
             this.btnLink.FlatAppearance.BorderSize = 0;
             this.btnLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLink.Image = global::ClientView.Properties.Resources.linkedin_icon;
-            this.btnLink.Location = new System.Drawing.Point(829, 447);
+            this.btnLink.Location = new System.Drawing.Point(859, 447);
             this.btnLink.Name = "btnLink";
             this.btnLink.Size = new System.Drawing.Size(22, 23);
             this.btnLink.TabIndex = 99;
@@ -221,7 +221,7 @@
             this.btnTwit.FlatAppearance.BorderSize = 0;
             this.btnTwit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTwit.Image = global::ClientView.Properties.Resources.twitter_icon;
-            this.btnTwit.Location = new System.Drawing.Point(803, 447);
+            this.btnTwit.Location = new System.Drawing.Point(831, 447);
             this.btnTwit.Name = "btnTwit";
             this.btnTwit.Size = new System.Drawing.Size(22, 23);
             this.btnTwit.TabIndex = 98;
@@ -289,7 +289,7 @@
             this.gVPenOrd.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.gVPenOrd.RowHeadersVisible = false;
             this.gVPenOrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gVPenOrd.Size = new System.Drawing.Size(308, 251);
+            this.gVPenOrd.Size = new System.Drawing.Size(337, 251);
             this.gVPenOrd.TabIndex = 51;
             // 
             // label7
@@ -378,7 +378,7 @@
             this.gVPay.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.gVPay.RowHeadersVisible = false;
             this.gVPay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gVPay.Size = new System.Drawing.Size(447, 115);
+            this.gVPay.Size = new System.Drawing.Size(382, 115);
             this.gVPay.TabIndex = 48;
             // 
             // label9
@@ -587,7 +587,7 @@
             this.paneID.Controls.Add(this.tbID);
             this.paneID.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paneID.ForeColor = System.Drawing.Color.Lime;
-            this.paneID.Location = new System.Drawing.Point(236, 170);
+            this.paneID.Location = new System.Drawing.Point(268, 170);
             this.paneID.Name = "paneID";
             this.paneID.Size = new System.Drawing.Size(374, 134);
             this.paneID.TabIndex = 5;
@@ -613,7 +613,7 @@
             this.paneLogo.Controls.Add(this.pictureBox4);
             this.paneLogo.Controls.Add(this.label1);
             this.paneLogo.Controls.Add(this.panel1);
-            this.paneLogo.Location = new System.Drawing.Point(230, 366);
+            this.paneLogo.Location = new System.Drawing.Point(266, 366);
             this.paneLogo.Name = "paneLogo";
             this.paneLogo.Size = new System.Drawing.Size(615, 95);
             this.paneLogo.TabIndex = 4;
@@ -674,7 +674,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(857, 473);
+            this.ClientSize = new System.Drawing.Size(893, 473);
             this.Controls.Add(this.paneMain);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

@@ -352,6 +352,8 @@
             this.printBalPay = new System.Drawing.Printing.PrintDocument();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyCusIdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label100 = new System.Windows.Forms.Label();
+            this.tbPenalTot = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.paneSet.SuspendLayout();
@@ -3477,6 +3479,8 @@
             // tabSales
             // 
             this.tabSales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabSales.Controls.Add(this.tbPenalTot);
+            this.tabSales.Controls.Add(this.label100);
             this.tabSales.Controls.Add(this.btnPenalPrint);
             this.tabSales.Controls.Add(this.btnSalePrint);
             this.tabSales.Controls.Add(this.gVPenal);
@@ -3581,13 +3585,13 @@
             // 
             // tbSaleTot
             // 
-            this.tbSaleTot.Enabled = false;
             this.tbSaleTot.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSaleTot.Location = new System.Drawing.Point(980, 305);
             this.tbSaleTot.Name = "tbSaleTot";
             this.tbSaleTot.Size = new System.Drawing.Size(111, 27);
             this.tbSaleTot.TabIndex = 88;
             this.tbSaleTot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbSaleTot.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label88
             // 
@@ -4543,6 +4547,27 @@
             this.copyCusIdToolStripMenuItem.Text = "Copy Customer ID";
             this.copyCusIdToolStripMenuItem.Click += new System.EventHandler(this.copyCusIdToolStripMenuItem_Click);
             // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label100.Location = new System.Drawing.Point(801, 627);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(104, 18);
+            this.label100.TabIndex = 93;
+            this.label100.Text = "Total Penalty:";
+            // 
+            // tbPenalTot
+            // 
+            this.tbPenalTot.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPenalTot.Location = new System.Drawing.Point(911, 623);
+            this.tbPenalTot.Name = "tbPenalTot";
+            this.tbPenalTot.Size = new System.Drawing.Size(111, 27);
+            this.tbPenalTot.TabIndex = 94;
+            this.tbPenalTot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbPenalTot.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
             // adminDash
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -4942,5 +4967,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem copyCusIdToolStripMenuItem;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox tbPenalTot;
+        private System.Windows.Forms.Label label100;
     }
 }
