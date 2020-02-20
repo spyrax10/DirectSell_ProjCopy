@@ -189,6 +189,7 @@ namespace DirectSelling
         public void cbSale()
         {
             string month = cbSaleMonth.Text;
+            string year = cbSaleYear.Text;
             SqlConnection saleCon = new SqlConnection(prodcs);
             SqlConnection penalCon = new SqlConnection(prodcs);
 
@@ -197,7 +198,7 @@ namespace DirectSelling
                 saleCon.Open();
                 DataTable dt = new DataTable();
                 adapt = new SqlDataAdapter("Select Month, cusId as CusID, proId as ProdID, " +
-                    "Qty, Comp as Company, Name, Profit from saleTB where Month = '" + month + "' " +
+                    "Qty, Comp as Company, Name, Profit from saleTB where Month = '" + month + "' and saleYear = '" + year + "' " +
                     "order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc", saleCon);
                 adapt.Fill(dt);
                 gVSales.DataSource = dt;
@@ -205,8 +206,8 @@ namespace DirectSelling
 
                 penalCon.Open();
                 DataTable dt2 = new DataTable();
-                adapt = new SqlDataAdapter("Select ordId as OrdID, cusId as CusID, DateOrd, DateRecv, DateDead, curBal as CurrentBal, penalDate as DatePenal, penalty as Penalty, newBal as NewBal from penaltyTB " +
-                    "where month = '" + month + "' and penalty != 0 order by month ASC, ordId ASC", penalCon);
+                adapt = new SqlDataAdapter("Select ordId as OrdID, cusId as CusID, DateOrd as DateOrdered, DateRecv as DateReceived, DateDead, curBal as CurrentBal, penalDate as DatePenal, penalty as Penalty, newBal as NewBal from penaltyTB " +
+                    "where month = '" + month + "' and penalty != 0 order by ordId ASC, Cast (penalDate as DATETIME)", penalCon);
                 adapt.Fill(dt2);
                 gVPenal.DataSource = dt2;
                 penalCon.Close();
@@ -222,7 +223,7 @@ namespace DirectSelling
             }
 
         }
-        public void saleRep()
+         public void saleRep()
         {
             SqlConnection saleCon = new SqlConnection(prodcs);
             SqlConnection penalCon = new SqlConnection(prodcs);
@@ -232,16 +233,16 @@ namespace DirectSelling
                 saleCon.Open();
                 DataTable dt = new DataTable();
                 adapt = new SqlDataAdapter("Select Month, cusId as CusID, proId as ProdID, " +
-                    "Qty, Comp as Company, Name, Profit from saleTB order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc", saleCon);          
+                    "Qty, Comp as Company, Name, Profit from saleTB order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc ", saleCon);          
                 adapt.Fill(dt);
                 gVSales.DataSource = dt;            
                 saleCon.Close();
-
+              
                 penalCon.Open();
                 DataTable dt2 = new DataTable();
                 adapt = new SqlDataAdapter("Select ordId as OrdID, cusId as CusID, " +
-                    "DateDead, curBal as CurrentBal, penalDate as DatePenal, " +
-                    "penalty as Penalty, newBal as NewBal from penaltyTB where penalty != 0 ", penalCon);
+                    "DateOrd as DateOrdered, DateRecv as DateReceived, DateDead as DueDate, curBal as CurrentBal, penalDate as DatePenal, " +
+                    "penalty as Penalty, newBal as NewBal from penaltyTB where penalty != 0 order by ordId ASC, Cast (penalDate as DATETIME) ", penalCon);
                 adapt.Fill(dt2);
                 gVPenal.DataSource = dt2;
                 penalCon.Close();
@@ -261,7 +262,8 @@ namespace DirectSelling
             {
                 homeCon.Open();
                 DataTable dt = new DataTable();
-                adapt = new SqlDataAdapter("Select Qty, Brand as Company, Name as Brand, Info as Name, Cat as Category from newprodTB where Qty != 0", homeCon);
+                adapt = new SqlDataAdapter("Select Qty, Brand as Company, Name as Brand, Info as Name, Cat as Category from newprodTB " +
+                    "where Qty != 0 order by prodId ASC", homeCon);
                 adapt.Fill(dt);
                 gVHomeStock.DataSource = dt;
                 homeCon.Close();
@@ -299,7 +301,7 @@ namespace DirectSelling
             {
                 saleCon.Open();
                 DataTable dt = new DataTable();
-                adapt = new SqlDataAdapter("Select Month, SUM(Cast(Profit as float)) as Profit from saleTB group by Month " +
+                adapt = new SqlDataAdapter("Select Month, SUM(Cast(Profit as float)) as Profit, saleYear as Year from saleTB group by Month, saleYear " +
                     "order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc", saleCon);
                 adapt.Fill(dt);
                 gVHomeSale.DataSource = dt;
@@ -338,15 +340,19 @@ namespace DirectSelling
             SqlConnection costCon = new SqlConnection(prodcs);
             SqlConnection insert = new SqlConnection(prodcs);
             SqlConnection update = new SqlConnection(prodcs);
-            SqlConnection check = new SqlConnection(prodcs);
+            SqlConnection chk = new SqlConnection(prodcs);
+            SqlConnection chk2 = new SqlConnection(prodcs);
+            SqlConnection chk3 = new SqlConnection(prodcs);
+            SqlConnection check2 = new SqlConnection(prodcs);
 
             string date = DateTime.Now.ToShortDateString();
             int nmonth = DateTime.Now.Month;
             string month = new DateTimeFormatInfo().GetMonthName(nmonth);
+            string year = DateTime.Now.Year.ToString();
 
             try
             {
-                
+
                 costCon.Open();
                 SqlCommand costCmd = costCon.CreateCommand();
                 costCmd.CommandType = CommandType.Text;
@@ -378,78 +384,161 @@ namespace DirectSelling
                         SqlCommand chkCmd = chkCon.CreateCommand();
                         chkCmd.CommandType = CommandType.Text;
                         chkCmd.CommandText = "Select * from penaltyTB " +
-                            "where ordId = '" + ordId + "' and penalty != 0";
+                            "where ordId = '" + ordId + "' and penalty != 0 " +
+                            "and penalDate != '" + date + "' " +
+                           "and newBal = (Select MAX (CAST(newBal as INT)) from penaltyTB) " +
+                           "and curBal = (Select MAX(CAST(curBal as INT)) from penaltyTB)";
+
                         SqlDataReader cDr = chkCmd.ExecuteReader();
 
                         if (!cDr.Read())
                         {
+                            // new credit:
+                            check2.Open();
+                            SqlCommand cmd = check2.CreateCommand();
+                            cmd.CommandType = CommandType.Text;
+                            cmd.CommandText = "Select * from penaltyTB where ordId = '" + ordId + "' ";
 
-                            DateTime due = DateTime.Parse(dueDate);
-                            DateTime Ddate = DateTime.Parse(date);
-                            double num = (Ddate - due).TotalDays;
-                            double penalty = cost * num;
-                            double newBal = Double.Parse(curBal) + penalty;
-                            string bal = newBal.ToString();
+                            SqlDataReader drc = cmd.ExecuteReader();
 
-                            insCon.Open();
-                            SqlCommand insCmd = insCon.CreateCommand();
-                            insCmd.CommandType = CommandType.Text;
-                            insCmd.CommandText = "Insert into penaltyTB Values ('" + month + "', " +
-                                "'" + ordId + "', " +
-                                "'" + cusId + "', " +
-                                "'" + dateOrd + "', " +
-                                "'" + dateRecv + "', " +
-                                "'" + dueDate + "', " +
-                                "'" + curBal + "', " +
-                                "'" + date + "', " +
-                                "'" + penalty.ToString() + "', " +
-                                "'" + bal + "')";
-                            insCmd.ExecuteNonQuery();
-                            insCon.Close();
+                            if (!drc.Read())
+                            {
+                                string pen = (cDr["penalDate"].ToString());
+                                DateTime due = DateTime.Parse(dueDate);
+                                DateTime Ddate = DateTime.Parse(date);
+                                double num = (Ddate - due).TotalDays;
+                                double penalty = cost * num;
+                                double newBal = Double.Parse(curBal) + penalty;
+                                string bal = newBal.ToString();
 
-                            upCon.Open();
-                            SqlCommand upCmd = upCon.CreateCommand();
-                            upCmd.CommandType = CommandType.Text;
-                            upCmd.CommandText = "Update cusBalTB set prodBal = '" + bal + "' " +
-                                "where ordId = '" + ordId + "'";
-                            upCmd.ExecuteNonQuery();
-                            upCon.Close();
+
+                                chk2.Open();
+                                SqlCommand chkmd2 = chk2.CreateCommand();
+                                chkmd2.CommandType = CommandType.Text;
+                                chkmd2.CommandText = "Select * from penaltyTB where ordId = '" + ordId + "' " +
+                                    "and penalDate = '" + date + "' ";
+
+                                SqlDataReader drchk2 = chkmd2.ExecuteReader();
+
+                                if (!drchk2.Read())
+                                {
+                                    insCon.Open();
+                                    SqlCommand insCmd = insCon.CreateCommand();
+                                    insCmd.CommandType = CommandType.Text;
+                                    insCmd.CommandText = "Insert into penaltyTB Values ('" + month + "', " +
+                                        "'" + ordId + "', " +
+                                        "'" + cusId + "', " +
+                                        "'" + dateOrd + "', " +
+                                        "'" + dateRecv + "', " +
+                                        "'" + dueDate + "', " +
+                                        "'" + curBal + "', " +
+                                        "'" + date + "', " +
+                                        "'" + penalty.ToString() + "', " +
+                                        "'" + bal + "', " +
+                                        "'" + year + "')";
+                                    insCmd.ExecuteNonQuery();
+                                    insCon.Close();
+
+                                    upCon.Open();
+                                    SqlCommand upCmd = upCon.CreateCommand();
+                                    upCmd.CommandType = CommandType.Text;
+                                    upCmd.CommandText = "Update cusBalTB set prodBal = '" + bal + "' " +
+                                        "where ordId = '" + ordId + "'";
+                                    upCmd.ExecuteNonQuery();
+                                    upCon.Close();
+                                }
+                                chk2.Close();
+
+                            }
+                            else
+                            {
+                                // if ordId is already penalized and app is open in succeding days
+                                string dPenal = (drc["penalDate"].ToString());
+                                DateTime due = DateTime.Parse(dPenal);
+                                DateTime Ddate = DateTime.Parse(date);
+                                double num3 = (Ddate - due).TotalDays;
+
+                                double newBal2 = Double.Parse(curBal) + cost;
+                                string bal2 = newBal2.ToString();
+
+                                chk3.Open();
+                                SqlCommand chkmd3 = chk3.CreateCommand();
+                                chkmd3.CommandType = CommandType.Text;
+                                chkmd3.CommandText = "Select * from penaltyTB where ordId = '" + ordId + "' " +
+                                    "and penalDate = '" + date + "'";
+                                SqlDataReader drchk3 = chkmd3.ExecuteReader();
+
+                                if (!drchk3.Read())
+                                {
+                                    insCon.Open();
+                                    SqlCommand insCmd2 = insCon.CreateCommand();
+                                    insCmd2.CommandType = CommandType.Text;
+                                    insCmd2.CommandText = "Insert into penaltyTB Values ('" + month + "', " +
+                                        "'" + ordId + "', " +
+                                        "'" + cusId + "', " +
+                                        "'" + dateOrd + "', " +
+                                        "'" + dateRecv + "', " +
+                                        "'" + dueDate + "', " +
+                                        "'" + curBal + "', " +
+                                        "'" + date + "', " +
+                                        "'" + cost.ToString() + "', " +
+                                        "'" + bal2 + "', " +
+                                        "'" + year + "')";
+                                    insCmd2.ExecuteNonQuery();
+                                    insCon.Close();
+
+                                    upCon.Open();
+                                    SqlCommand upCmd2 = upCon.CreateCommand();
+                                    upCmd2.CommandType = CommandType.Text;
+                                    upCmd2.CommandText = "Update cusBalTB set prodBal = '" + bal2 + "' " +
+                                        "where ordId = '" + ordId + "'";
+                                    upCmd2.ExecuteNonQuery();
+                                    upCon.Close();
+                                }
+                                chk3.Close();
+                            }
+                            check2.Close();
                         }
                         else
                         {
+                            // if ordId is already penalized and the app is not open for more than one day
                             string cus = (cDr["cusId"].ToString());
                             string ord = (cDr["ordId"].ToString());
                             string dOrd = (cDr["DateOrd"].ToString());
                             string dRecv = (cDr["DateRecv"].ToString());
                             string ordDue = (cDr["DateDead"].ToString());
-                            string penalty = (cDr["newBal"].ToString());
-                            double Fpenal = Double.Parse(curBal);
-                            double res = cost + Fpenal;
-                            string Fres = res.ToString();
+                            string dPenal = (cDr["penalDate"].ToString());
 
-                            check.Open();
-                            SqlCommand cmd = check.CreateCommand();
-                            cmd.CommandType = CommandType.Text;
-                            cmd.CommandText = "Select * from penaltyTB where ordId = '" + ord + "' " +
+                            DateTime datePenal = DateTime.Parse(dPenal);
+                            DateTime Ddate = DateTime.Parse(date);
+                            double num2 = (Ddate - datePenal).TotalDays;
+                            double fpenalty = cost * num2;
+                            double newBal2 = Double.Parse(curBal) + fpenalty;
+                            string Fres = newBal2.ToString();
+
+                            chk.Open();
+                            SqlCommand chkmd = chk.CreateCommand();
+                            chkmd.CommandType = CommandType.Text;
+                            chkmd.CommandText = "Select * from penaltyTB where ordId = '" + ordId + "' " +
                                 "and penalDate = '" + date + "'";
-                            SqlDataReader dr3 = cmd.ExecuteReader();
+                            SqlDataReader drchk = chkmd.ExecuteReader();
 
-                            if (!dr3.Read())
+                            if (!drchk.Read())
                             {
-                               
                                 insert.Open();
                                 SqlCommand insCmd = insert.CreateCommand();
                                 insCmd.CommandType = CommandType.Text;
                                 insCmd.CommandText = "Insert into penaltyTB Values ('" + month + "', " +
                                     "'" + ord + "', " +
-                                    "'" + cus + "', " +
+                                    "'" + cusId + "', " +
                                     "'" + dOrd + "', " +
                                     "'" + dRecv + "', " +
                                     "'" + ordDue + "', " +
-                                    "'" + penalty + "', " +
+                                    "'" + curBal + "', " +
                                     "'" + date + "', " +
-                                    "'" + cost.ToString() + "', " +
-                                    "'" + Fres + "')";
+                                    "'" + fpenalty.ToString() + "', " +
+                                    "'" + Fres + "', " +
+                                    "'" + year + "')";
                                 insCmd.ExecuteNonQuery();
                                 insert.Close();
 
@@ -461,7 +550,7 @@ namespace DirectSelling
                                 upCmd2.ExecuteNonQuery();
                                 update.Close();
                             }
-                            check.Close();
+                            chk.Close();
                         }
                         chkCon.Close();
                     }
@@ -472,10 +561,12 @@ namespace DirectSelling
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (e.Message != "Invalid attempt to read when no data is present.")
+                {
+                    MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-
         public void payCusId()
         {
             SqlConnection cusCon = new SqlConnection(prodcs);
@@ -513,6 +604,7 @@ namespace DirectSelling
                             lblPayCusId.Text = tbPayCusId.Text;
                             paneBalBreak.Visible = true;
                             panePayCusId.Visible = false;
+                            btnPayClose.Visible = true;
                         }
                         else
                         {
@@ -1035,6 +1127,7 @@ namespace DirectSelling
             string date = DateTime.Now.ToShortDateString();
             int nmonth = DateTime.Now.Month;
             string month = new DateTimeFormatInfo().GetMonthName(nmonth);
+            string year = DateTime.Now.Year.ToString();
 
             try
             {
@@ -1068,7 +1161,8 @@ namespace DirectSelling
                         "'" + name + "', " +
                         "'" + date + "', " +
                         "'" + month + "', " +
-                        "'" + pro + "')";
+                        "'" + pro + "', " +
+                        "'" + year + "')";
                     proCmd.ExecuteNonQuery();
 
                 }
@@ -1348,6 +1442,28 @@ namespace DirectSelling
                 adapt.Fill(dt);
                 gVOResc.DataSource = dt;
                 serCon.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void penalRep()
+        {
+            SqlConnection con = new SqlConnection(prodcs);
+            string value = tbPenalCus.Text;
+
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("Select ordId as OrdID, cusId as CusID, " +
+                    "DateOrd as DateOrdered, DateRecv as DateReceived, DateDead as DueDate, curBal as CurrentBal, penalDate as DatePenal, " +
+                    "penalty as Penalty, newBal as NewBal from penaltyTB where ordId LIKE '%" + value + "%' OR cusId LIKE '%" + value + "%' " +
+                    "penalty != 0 order by ordId ASC, Cast (penalDate as DATETIME)", con);
+                adapt.Fill(dt);
+                gVPenal.DataSource = dt;
+                con.Close();
             }
             catch (Exception e)
             {
@@ -2300,7 +2416,8 @@ namespace DirectSelling
             panePayNow.Visible = false;
             panePaySlip.Visible = false;
             panePayCusId.Visible = true;
-           
+            btnPayClose.Visible = false;
+          
             tbPayCusId.Text = "";
             clrPay();
             tabControl1.TabPages.Insert(7, tabPay);
@@ -2324,17 +2441,17 @@ namespace DirectSelling
         private void adminDash_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("This would make application close, Continue?", " Confirm",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                
-                Application.Exit();
-            }
-            else
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 e.Cancel = true;
             }
-
+            else
+            {
+                this.FormClosing -= adminDash_FormClosing;
+                Application.Exit();
+            }
         }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -2882,13 +2999,41 @@ namespace DirectSelling
 
         private void cbSaleMonth_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbSale();
+            cbSaleYear.Text = "";
+            
+            SqlConnection con = new SqlConnection(prodcs);
+            string month = cbSaleMonth.Text;
+            try
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Select * from saleTB where Month = '" + month + "'";
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    string year = (dr["saleYear"].ToString());
+
+                    if (!cbSaleYear.Items.Contains(year))
+                    {
+                        cbSaleYear.Items.Add(year);
+                    }
+                }
+            }
+            catch(Exception f)
+            {
+                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnRe_Click(object sender, EventArgs e)
         {
             saleRep();
             cbSaleMonth.Text = "";
+            cbSaleYear.Text = "";
+            tbPenalCus.Text = "Search Here";
+            tbPenalCus.ForeColor = Color.Gray;
         }
 
         private void btnSalePrint_Click(object sender, EventArgs e)
@@ -3050,6 +3195,47 @@ namespace DirectSelling
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void btnPayClose_Click(object sender, EventArgs e)
+        {
+            paneBalBreak.Visible = false;
+            panePayNow.Visible = false;
+            panePaySlip.Visible = false;
+            panePayCusId.Visible = true;
+            btnPayClose.Visible = false;
+
+            tbPayCusId.Text = "";
+            clrPay();
+        }
+
+        private void tbPenalCus_MouseClick(object sender, MouseEventArgs e)
+        {
+            tbPenalCus.Text = "";
+            tbPenalCus.ForeColor = Color.Black;
+        }
+
+        private void tbPenalCus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                if(tbPenalCus.Text != "")
+                {
+                    penalRep();
+                }
+            }
+        }
+
+        private void cbSaleYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbSaleMonth.Text == "")
+            {
+                MessageBox.Show("Select Month!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                cbSale();
+            }
         }
     }
 }

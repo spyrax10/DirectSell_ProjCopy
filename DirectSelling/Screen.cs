@@ -176,6 +176,7 @@ namespace DirectSelling
                 string deadline = newDate.AddMonths(1).ToShortDateString();
                 string ordStat = "RECEIVED";
                 string payId = "-----";
+                string year = DateTime.Now.Year.ToString();
 
                 double zQty = Double.Parse(lblCusRem.Text) - Double.Parse(tbCusQty.Text);
                 string upQty = zQty.ToString();
@@ -249,7 +250,8 @@ namespace DirectSelling
                             "'" + name + "', " +
                             "'" + date + "', " +
                             "'" + month + "', " +
-                            "'" + spro + "')";
+                            "'" + spro + "', " +
+                            "'" + year + "')";
                         saleCmd.ExecuteNonQuery();
                         saleCon.Close();
 
@@ -384,6 +386,7 @@ namespace DirectSelling
             string month = new DateTimeFormatInfo().GetMonthName(nmonth);
             string price = tbCashSRP.Text;
             string quan = tbCashQty.Text;
+            string year = DateTime.Now.Year.ToString();
 
 
             try
@@ -412,7 +415,8 @@ namespace DirectSelling
                             "'" + name + "', " +
                             "'" + date + "', " +
                             "'" + month + "', " +
-                            "'" + pro + "')";
+                            "'" + pro + "', " +
+                            "'" + year + "')";
                         proCmd.ExecuteNonQuery();
 
                     

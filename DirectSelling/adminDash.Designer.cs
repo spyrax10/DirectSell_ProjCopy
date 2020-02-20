@@ -271,6 +271,11 @@
             this.btnOrdRe = new System.Windows.Forms.Button();
             this.btnCashRe = new System.Windows.Forms.Button();
             this.tabSales = new System.Windows.Forms.TabPage();
+            this.cbSaleYear = new System.Windows.Forms.ComboBox();
+            this.label101 = new System.Windows.Forms.Label();
+            this.tbPenalCus = new System.Windows.Forms.TextBox();
+            this.tbPenalTot = new System.Windows.Forms.TextBox();
+            this.label100 = new System.Windows.Forms.Label();
             this.btnPenalPrint = new System.Windows.Forms.Button();
             this.btnSalePrint = new System.Windows.Forms.Button();
             this.gVPenal = new System.Windows.Forms.DataGridView();
@@ -304,6 +309,7 @@
             this.gVOrder = new System.Windows.Forms.DataGridView();
             this.tabPay = new System.Windows.Forms.TabPage();
             this.panePay = new System.Windows.Forms.Panel();
+            this.btnPayClose = new System.Windows.Forms.Button();
             this.panePayCusId = new System.Windows.Forms.Panel();
             this.tbPayCusId = new System.Windows.Forms.TextBox();
             this.label73 = new System.Windows.Forms.Label();
@@ -352,8 +358,6 @@
             this.printBalPay = new System.Drawing.Printing.PrintDocument();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copyCusIdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label100 = new System.Windows.Forms.Label();
-            this.tbPenalTot = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.paneSet.SuspendLayout();
@@ -899,7 +903,7 @@
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(598, 623);
+            this.button6.Location = new System.Drawing.Point(619, 623);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(135, 28);
             this.button6.TabIndex = 11;
@@ -930,7 +934,7 @@
             this.gVHomeStock.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gVHomeStock.RowHeadersVisible = false;
             this.gVHomeStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gVHomeStock.Size = new System.Drawing.Size(713, 187);
+            this.gVHomeStock.Size = new System.Drawing.Size(734, 187);
             this.gVHomeStock.TabIndex = 92;
             // 
             // label93
@@ -981,7 +985,7 @@
             this.gVHomeCusInfo.BackgroundColor = System.Drawing.Color.White;
             this.gVHomeCusInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gVHomeCusInfo.GridColor = System.Drawing.Color.DodgerBlue;
-            this.gVHomeCusInfo.Location = new System.Drawing.Point(793, 43);
+            this.gVHomeCusInfo.Location = new System.Drawing.Point(792, 43);
             this.gVHomeCusInfo.Name = "gVHomeCusInfo";
             this.gVHomeCusInfo.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1005,7 +1009,7 @@
             this.btnHomeSale.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnHomeSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.btnHomeSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomeSale.Location = new System.Drawing.Point(598, 354);
+            this.btnHomeSale.Location = new System.Drawing.Point(619, 354);
             this.btnHomeSale.Name = "btnHomeSale";
             this.btnHomeSale.Size = new System.Drawing.Size(135, 28);
             this.btnHomeSale.TabIndex = 10;
@@ -1023,7 +1027,7 @@
             this.gVHomeSale.BackgroundColor = System.Drawing.Color.White;
             this.gVHomeSale.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gVHomeSale.GridColor = System.Drawing.Color.DodgerBlue;
-            this.gVHomeSale.Location = new System.Drawing.Point(482, 43);
+            this.gVHomeSale.Location = new System.Drawing.Point(460, 43);
             this.gVHomeSale.Name = "gVHomeSale";
             this.gVHomeSale.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1036,7 +1040,7 @@
             this.gVHomeSale.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gVHomeSale.RowHeadersVisible = false;
             this.gVHomeSale.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gVHomeSale.Size = new System.Drawing.Size(251, 305);
+            this.gVHomeSale.Size = new System.Drawing.Size(294, 305);
             this.gVHomeSale.TabIndex = 86;
             // 
             // label87
@@ -1044,7 +1048,7 @@
             this.label87.AutoSize = true;
             this.label87.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label87.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label87.Location = new System.Drawing.Point(476, 8);
+            this.label87.Location = new System.Drawing.Point(454, 8);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(257, 32);
             this.label87.TabIndex = 85;
@@ -3195,7 +3199,6 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
@@ -3479,6 +3482,9 @@
             // tabSales
             // 
             this.tabSales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabSales.Controls.Add(this.cbSaleYear);
+            this.tabSales.Controls.Add(this.label101);
+            this.tabSales.Controls.Add(this.tbPenalCus);
             this.tabSales.Controls.Add(this.tbPenalTot);
             this.tabSales.Controls.Add(this.label100);
             this.tabSales.Controls.Add(this.btnPenalPrint);
@@ -3499,6 +3505,61 @@
             this.tabSales.TabIndex = 6;
             this.tabSales.Text = "Sales & Penalty Report";
             this.tabSales.UseVisualStyleBackColor = true;
+            // 
+            // cbSaleYear
+            // 
+            this.cbSaleYear.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSaleYear.FormattingEnabled = true;
+            this.cbSaleYear.Location = new System.Drawing.Point(1004, 19);
+            this.cbSaleYear.Name = "cbSaleYear";
+            this.cbSaleYear.Size = new System.Drawing.Size(59, 26);
+            this.cbSaleYear.TabIndex = 97;
+            this.cbSaleYear.SelectedIndexChanged += new System.EventHandler(this.cbSaleYear_SelectedIndexChanged);
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label101.Location = new System.Drawing.Point(961, 22);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(46, 18);
+            this.label101.TabIndex = 96;
+            this.label101.Text = "Year:";
+            // 
+            // tbPenalCus
+            // 
+            this.tbPenalCus.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tbPenalCus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPenalCus.ForeColor = System.Drawing.Color.Gray;
+            this.tbPenalCus.Location = new System.Drawing.Point(6, 358);
+            this.tbPenalCus.Name = "tbPenalCus";
+            this.tbPenalCus.Size = new System.Drawing.Size(193, 27);
+            this.tbPenalCus.TabIndex = 95;
+            this.tbPenalCus.Text = "SEARCH HERE";
+            this.tbPenalCus.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbPenalCus_MouseClick);
+            this.tbPenalCus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPenalCus_KeyPress);
+            // 
+            // tbPenalTot
+            // 
+            this.tbPenalTot.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPenalTot.Location = new System.Drawing.Point(911, 623);
+            this.tbPenalTot.Name = "tbPenalTot";
+            this.tbPenalTot.Size = new System.Drawing.Size(111, 27);
+            this.tbPenalTot.TabIndex = 94;
+            this.tbPenalTot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbPenalTot.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label100.Location = new System.Drawing.Point(801, 627);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(104, 18);
+            this.label100.TabIndex = 93;
+            this.label100.Text = "Total Penalty:";
             // 
             // btnPenalPrint
             // 
@@ -3609,7 +3670,7 @@
             this.label72.AutoSize = true;
             this.label72.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label72.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label72.Location = new System.Drawing.Point(881, 17);
+            this.label72.Location = new System.Drawing.Point(792, 22);
             this.label72.Name = "label72";
             this.label72.Size = new System.Drawing.Size(58, 18);
             this.label72.TabIndex = 78;
@@ -3617,7 +3678,7 @@
             // 
             // cbSaleMonth
             // 
-            this.cbSaleMonth.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSaleMonth.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSaleMonth.FormattingEnabled = true;
             this.cbSaleMonth.Items.AddRange(new object[] {
             "January",
@@ -3632,9 +3693,9 @@
             "October",
             "November",
             "December"});
-            this.cbSaleMonth.Location = new System.Drawing.Point(945, 16);
+            this.cbSaleMonth.Location = new System.Drawing.Point(850, 19);
             this.cbSaleMonth.Name = "cbSaleMonth";
-            this.cbSaleMonth.Size = new System.Drawing.Size(114, 24);
+            this.cbSaleMonth.Size = new System.Drawing.Size(105, 26);
             this.cbSaleMonth.TabIndex = 32;
             this.cbSaleMonth.SelectedIndexChanged += new System.EventHandler(this.cbSaleMonth_SelectedIndexChanged);
             // 
@@ -3675,7 +3736,7 @@
             this.btnRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRe.ForeColor = System.Drawing.Color.Black;
             this.btnRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
-            this.btnRe.Location = new System.Drawing.Point(1063, 16);
+            this.btnRe.Location = new System.Drawing.Point(1069, 21);
             this.btnRe.Name = "btnRe";
             this.btnRe.Size = new System.Drawing.Size(26, 23);
             this.btnRe.TabIndex = 33;
@@ -3968,6 +4029,7 @@
             // panePay
             // 
             this.panePay.BackColor = System.Drawing.Color.White;
+            this.panePay.Controls.Add(this.btnPayClose);
             this.panePay.Controls.Add(this.panePayCusId);
             this.panePay.Controls.Add(this.panePayNow);
             this.panePay.Controls.Add(this.panePaySlip);
@@ -3977,6 +4039,18 @@
             this.panePay.Name = "panePay";
             this.panePay.Size = new System.Drawing.Size(1100, 656);
             this.panePay.TabIndex = 0;
+            // 
+            // btnPayClose
+            // 
+            this.btnPayClose.FlatAppearance.BorderSize = 0;
+            this.btnPayClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayClose.Image = global::DirectSelling.Properties.Resources.Button_Close_icon;
+            this.btnPayClose.Location = new System.Drawing.Point(1065, 3);
+            this.btnPayClose.Name = "btnPayClose";
+            this.btnPayClose.Size = new System.Drawing.Size(30, 30);
+            this.btnPayClose.TabIndex = 103;
+            this.btnPayClose.UseVisualStyleBackColor = true;
+            this.btnPayClose.Click += new System.EventHandler(this.btnPayClose_Click);
             // 
             // panePayCusId
             // 
@@ -4547,27 +4621,6 @@
             this.copyCusIdToolStripMenuItem.Text = "Copy Customer ID";
             this.copyCusIdToolStripMenuItem.Click += new System.EventHandler(this.copyCusIdToolStripMenuItem_Click);
             // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label100.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label100.Location = new System.Drawing.Point(801, 627);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(104, 18);
-            this.label100.TabIndex = 93;
-            this.label100.Text = "Total Penalty:";
-            // 
-            // tbPenalTot
-            // 
-            this.tbPenalTot.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPenalTot.Location = new System.Drawing.Point(911, 623);
-            this.tbPenalTot.Name = "tbPenalTot";
-            this.tbPenalTot.Size = new System.Drawing.Size(111, 27);
-            this.tbPenalTot.TabIndex = 94;
-            this.tbPenalTot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tbPenalTot.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
             // adminDash
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -4969,5 +5022,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox tbPenalTot;
         private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Button btnPayClose;
+        private System.Windows.Forms.TextBox tbPenalCus;
+        private System.Windows.Forms.ComboBox cbSaleYear;
+        private System.Windows.Forms.Label label101;
     }
 }
