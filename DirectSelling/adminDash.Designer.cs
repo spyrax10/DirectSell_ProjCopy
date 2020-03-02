@@ -54,9 +54,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminDash));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.btnFB = new System.Windows.Forms.Button();
-            this.btnLink = new System.Windows.Forms.Button();
-            this.btnTwit = new System.Windows.Forms.Button();
             this.btnSet = new System.Windows.Forms.Button();
             this.btnRes = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -271,6 +268,9 @@
             this.btnOrdRe = new System.Windows.Forms.Button();
             this.btnCashRe = new System.Windows.Forms.Button();
             this.tabSales = new System.Windows.Forms.TabPage();
+            this.tbSales = new System.Windows.Forms.TextBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.cbSaleYear = new System.Windows.Forms.ComboBox();
             this.label101 = new System.Windows.Forms.Label();
             this.tbPenalCus = new System.Windows.Forms.TextBox();
@@ -420,9 +420,6 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.btnFB);
-            this.panel1.Controls.Add(this.btnLink);
-            this.panel1.Controls.Add(this.btnTwit);
             this.panel1.Controls.Add(this.btnSet);
             this.panel1.Controls.Add(this.btnRes);
             this.panel1.Controls.Add(this.panel2);
@@ -453,51 +450,6 @@
             this.button4.TabIndex = 104;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btnFB
-            // 
-            this.btnFB.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnFB.FlatAppearance.BorderSize = 0;
-            this.btnFB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnFB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFB.Image = global::DirectSelling.Properties.Resources.social_facebook_box_blue_icon;
-            this.btnFB.Location = new System.Drawing.Point(149, 663);
-            this.btnFB.Name = "btnFB";
-            this.btnFB.Size = new System.Drawing.Size(22, 23);
-            this.btnFB.TabIndex = 103;
-            this.btnFB.UseVisualStyleBackColor = true;
-            this.btnFB.Click += new System.EventHandler(this.btnFB_Click);
-            // 
-            // btnLink
-            // 
-            this.btnLink.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLink.FlatAppearance.BorderSize = 0;
-            this.btnLink.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnLink.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLink.Image = global::DirectSelling.Properties.Resources.linkedin_icon;
-            this.btnLink.Location = new System.Drawing.Point(203, 663);
-            this.btnLink.Name = "btnLink";
-            this.btnLink.Size = new System.Drawing.Size(22, 23);
-            this.btnLink.TabIndex = 102;
-            this.btnLink.UseVisualStyleBackColor = true;
-            this.btnLink.Click += new System.EventHandler(this.btnLink_Click);
-            // 
-            // btnTwit
-            // 
-            this.btnTwit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTwit.FlatAppearance.BorderSize = 0;
-            this.btnTwit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnTwit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnTwit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTwit.Image = global::DirectSelling.Properties.Resources.twitter_icon;
-            this.btnTwit.Location = new System.Drawing.Point(176, 663);
-            this.btnTwit.Name = "btnTwit";
-            this.btnTwit.Size = new System.Drawing.Size(22, 23);
-            this.btnTwit.TabIndex = 101;
-            this.btnTwit.UseVisualStyleBackColor = true;
-            this.btnTwit.Click += new System.EventHandler(this.btnTwit_Click);
             // 
             // btnSet
             // 
@@ -1046,13 +998,13 @@
             // label87
             // 
             this.label87.AutoSize = true;
-            this.label87.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label87.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label87.Location = new System.Drawing.Point(454, 8);
+            this.label87.Location = new System.Drawing.Point(455, 9);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(257, 32);
+            this.label87.Size = new System.Drawing.Size(285, 28);
             this.label87.TabIndex = 85;
-            this.label87.Text = "Quick Sale Report:";
+            this.label87.Text = "Monthly Penalty Report:";
             // 
             // gVHomePenOrd
             // 
@@ -2533,13 +2485,14 @@
             // 
             // paneUpCus
             // 
-            this.paneUpCus.BackColor = System.Drawing.Color.Black;
+            this.paneUpCus.BackColor = System.Drawing.Color.DodgerBlue;
             this.paneUpCus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.paneUpCus.Controls.Add(this.tbUpCusId);
             this.paneUpCus.Controls.Add(this.btnCusUpd);
             this.paneUpCus.Controls.Add(this.groupBox3);
             this.paneUpCus.Controls.Add(this.groupBox4);
             this.paneUpCus.Controls.Add(this.label54);
+            this.paneUpCus.ForeColor = System.Drawing.Color.Black;
             this.paneUpCus.Location = new System.Drawing.Point(384, 100);
             this.paneUpCus.Name = "paneUpCus";
             this.paneUpCus.Size = new System.Drawing.Size(332, 462);
@@ -2547,10 +2500,10 @@
             // 
             // tbUpCusId
             // 
-            this.tbUpCusId.BackColor = System.Drawing.Color.Black;
+            this.tbUpCusId.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbUpCusId.Enabled = false;
             this.tbUpCusId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUpCusId.ForeColor = System.Drawing.Color.White;
+            this.tbUpCusId.ForeColor = System.Drawing.Color.Black;
             this.tbUpCusId.Location = new System.Drawing.Point(104, 419);
             this.tbUpCusId.Name = "tbUpCusId";
             this.tbUpCusId.Size = new System.Drawing.Size(118, 27);
@@ -2589,7 +2542,7 @@
             this.groupBox3.Controls.Add(this.cbUpCusStat);
             this.groupBox3.Controls.Add(this.label48);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.Red;
+            this.groupBox3.ForeColor = System.Drawing.Color.Yellow;
             this.groupBox3.Location = new System.Drawing.Point(11, 5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(311, 209);
@@ -2616,7 +2569,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label43.ForeColor = System.Drawing.Color.White;
             this.label43.Location = new System.Drawing.Point(117, 138);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(53, 18);
@@ -2625,9 +2578,9 @@
             // 
             // tbUpCusLast
             // 
-            this.tbUpCusLast.BackColor = System.Drawing.Color.Black;
+            this.tbUpCusLast.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbUpCusLast.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUpCusLast.ForeColor = System.Drawing.Color.White;
+            this.tbUpCusLast.ForeColor = System.Drawing.Color.Black;
             this.tbUpCusLast.Location = new System.Drawing.Point(120, 104);
             this.tbUpCusLast.Name = "tbUpCusLast";
             this.tbUpCusLast.Size = new System.Drawing.Size(173, 23);
@@ -2637,9 +2590,9 @@
             // 
             // tbUpCusMob
             // 
-            this.tbUpCusMob.BackColor = System.Drawing.Color.Black;
+            this.tbUpCusMob.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbUpCusMob.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUpCusMob.ForeColor = System.Drawing.Color.White;
+            this.tbUpCusMob.ForeColor = System.Drawing.Color.Black;
             this.tbUpCusMob.Location = new System.Drawing.Point(120, 167);
             this.tbUpCusMob.Name = "tbUpCusMob";
             this.tbUpCusMob.Size = new System.Drawing.Size(173, 23);
@@ -2649,7 +2602,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label44.ForeColor = System.Drawing.Color.White;
             this.label44.Location = new System.Drawing.Point(50, 168);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(64, 18);
@@ -2660,7 +2613,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label45.ForeColor = System.Drawing.Color.White;
             this.label45.Location = new System.Drawing.Point(33, 134);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(38, 18);
@@ -2669,9 +2622,9 @@
             // 
             // tbUpCusFirst
             // 
-            this.tbUpCusFirst.BackColor = System.Drawing.Color.Black;
+            this.tbUpCusFirst.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbUpCusFirst.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUpCusFirst.ForeColor = System.Drawing.Color.White;
+            this.tbUpCusFirst.ForeColor = System.Drawing.Color.Black;
             this.tbUpCusFirst.Location = new System.Drawing.Point(120, 46);
             this.tbUpCusFirst.Name = "tbUpCusFirst";
             this.tbUpCusFirst.Size = new System.Drawing.Size(173, 23);
@@ -2681,9 +2634,9 @@
             // 
             // tbUpCusMid
             // 
-            this.tbUpCusMid.BackColor = System.Drawing.Color.Black;
+            this.tbUpCusMid.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbUpCusMid.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUpCusMid.ForeColor = System.Drawing.Color.White;
+            this.tbUpCusMid.ForeColor = System.Drawing.Color.Black;
             this.tbUpCusMid.Location = new System.Drawing.Point(120, 75);
             this.tbUpCusMid.Name = "tbUpCusMid";
             this.tbUpCusMid.Size = new System.Drawing.Size(173, 23);
@@ -2693,9 +2646,9 @@
             // 
             // cbUpCusSex
             // 
-            this.cbUpCusSex.BackColor = System.Drawing.Color.Black;
+            this.cbUpCusSex.BackColor = System.Drawing.Color.DodgerBlue;
             this.cbUpCusSex.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUpCusSex.ForeColor = System.Drawing.Color.White;
+            this.cbUpCusSex.ForeColor = System.Drawing.Color.Black;
             this.cbUpCusSex.FormattingEnabled = true;
             this.cbUpCusSex.Items.AddRange(new object[] {
             "M",
@@ -2710,7 +2663,7 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label46.ForeColor = System.Drawing.Color.White;
             this.label46.Location = new System.Drawing.Point(33, 49);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(81, 18);
@@ -2721,7 +2674,7 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label47.ForeColor = System.Drawing.Color.White;
             this.label47.Location = new System.Drawing.Point(33, 105);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(82, 18);
@@ -2730,9 +2683,9 @@
             // 
             // cbUpCusStat
             // 
-            this.cbUpCusStat.BackColor = System.Drawing.Color.Black;
+            this.cbUpCusStat.BackColor = System.Drawing.Color.DodgerBlue;
             this.cbUpCusStat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUpCusStat.ForeColor = System.Drawing.Color.White;
+            this.cbUpCusStat.ForeColor = System.Drawing.Color.Black;
             this.cbUpCusStat.FormattingEnabled = true;
             this.cbUpCusStat.Items.AddRange(new object[] {
             "Single",
@@ -2749,7 +2702,7 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label48.ForeColor = System.Drawing.Color.White;
             this.label48.Location = new System.Drawing.Point(7, 76);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(107, 18);
@@ -2769,7 +2722,7 @@
             this.groupBox4.Controls.Add(this.cbUpCusCoun);
             this.groupBox4.Controls.Add(this.label53);
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.Color.Red;
+            this.groupBox4.ForeColor = System.Drawing.Color.Yellow;
             this.groupBox4.Location = new System.Drawing.Point(11, 220);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(311, 189);
@@ -2781,7 +2734,7 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label49.ForeColor = System.Drawing.Color.White;
             this.label49.Location = new System.Drawing.Point(48, 128);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(84, 18);
@@ -2790,9 +2743,9 @@
             // 
             // cbUpCusBar
             // 
-            this.cbUpCusBar.BackColor = System.Drawing.Color.Black;
+            this.cbUpCusBar.BackColor = System.Drawing.Color.DodgerBlue;
             this.cbUpCusBar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUpCusBar.ForeColor = System.Drawing.Color.White;
+            this.cbUpCusBar.ForeColor = System.Drawing.Color.Black;
             this.cbUpCusBar.FormattingEnabled = true;
             this.cbUpCusBar.Items.AddRange(new object[] {
             "Philippines"});
@@ -2804,9 +2757,9 @@
             // 
             // tbUpCusHou
             // 
-            this.tbUpCusHou.BackColor = System.Drawing.Color.Black;
+            this.tbUpCusHou.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbUpCusHou.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUpCusHou.ForeColor = System.Drawing.Color.White;
+            this.tbUpCusHou.ForeColor = System.Drawing.Color.Black;
             this.tbUpCusHou.Location = new System.Drawing.Point(138, 157);
             this.tbUpCusHou.Name = "tbUpCusHou";
             this.tbUpCusHou.Size = new System.Drawing.Size(155, 23);
@@ -2816,7 +2769,7 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label50.ForeColor = System.Drawing.Color.White;
             this.label50.Location = new System.Drawing.Point(6, 158);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(126, 18);
@@ -2825,9 +2778,9 @@
             // 
             // cbUpCusMun
             // 
-            this.cbUpCusMun.BackColor = System.Drawing.Color.Black;
+            this.cbUpCusMun.BackColor = System.Drawing.Color.DodgerBlue;
             this.cbUpCusMun.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUpCusMun.ForeColor = System.Drawing.Color.White;
+            this.cbUpCusMun.ForeColor = System.Drawing.Color.Black;
             this.cbUpCusMun.FormattingEnabled = true;
             this.cbUpCusMun.Items.AddRange(new object[] {
             "Philippines"});
@@ -2842,7 +2795,7 @@
             // 
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label51.ForeColor = System.Drawing.Color.White;
             this.label51.Location = new System.Drawing.Point(29, 98);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(103, 18);
@@ -2851,9 +2804,9 @@
             // 
             // cbUpCusPro
             // 
-            this.cbUpCusPro.BackColor = System.Drawing.Color.Black;
+            this.cbUpCusPro.BackColor = System.Drawing.Color.DodgerBlue;
             this.cbUpCusPro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUpCusPro.ForeColor = System.Drawing.Color.White;
+            this.cbUpCusPro.ForeColor = System.Drawing.Color.Black;
             this.cbUpCusPro.FormattingEnabled = true;
             this.cbUpCusPro.Items.AddRange(new object[] {
             "Philippines"});
@@ -2868,7 +2821,7 @@
             // 
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label52.ForeColor = System.Drawing.Color.White;
             this.label52.Location = new System.Drawing.Point(62, 38);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(70, 18);
@@ -2877,9 +2830,9 @@
             // 
             // cbUpCusCoun
             // 
-            this.cbUpCusCoun.BackColor = System.Drawing.Color.Black;
+            this.cbUpCusCoun.BackColor = System.Drawing.Color.DodgerBlue;
             this.cbUpCusCoun.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUpCusCoun.ForeColor = System.Drawing.Color.White;
+            this.cbUpCusCoun.ForeColor = System.Drawing.Color.Black;
             this.cbUpCusCoun.FormattingEnabled = true;
             this.cbUpCusCoun.Items.AddRange(new object[] {
             "Philippines"});
@@ -2894,7 +2847,7 @@
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label53.ForeColor = System.Drawing.Color.White;
             this.label53.Location = new System.Drawing.Point(56, 68);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(76, 18);
@@ -2905,7 +2858,7 @@
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label54.ForeColor = System.Drawing.Color.White;
             this.label54.Location = new System.Drawing.Point(8, 423);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(90, 18);
@@ -3482,6 +3435,9 @@
             // tabSales
             // 
             this.tabSales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabSales.Controls.Add(this.tbSales);
+            this.tabSales.Controls.Add(this.label102);
+            this.tabSales.Controls.Add(this.button5);
             this.tabSales.Controls.Add(this.cbSaleYear);
             this.tabSales.Controls.Add(this.label101);
             this.tabSales.Controls.Add(this.tbPenalCus);
@@ -3505,6 +3461,45 @@
             this.tabSales.TabIndex = 6;
             this.tabSales.Text = "Sales & Penalty Report";
             this.tabSales.UseVisualStyleBackColor = true;
+            // 
+            // tbSales
+            // 
+            this.tbSales.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSales.Location = new System.Drawing.Point(998, 305);
+            this.tbSales.Name = "tbSales";
+            this.tbSales.Size = new System.Drawing.Size(93, 27);
+            this.tbSales.TabIndex = 100;
+            this.tbSales.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label102.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label102.Location = new System.Drawing.Point(904, 309);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(88, 18);
+            this.label102.TabIndex = 99;
+            this.label102.Text = "Total Sales:";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
+            this.button5.Location = new System.Drawing.Point(201, 360);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(26, 23);
+            this.button5.TabIndex = 98;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // cbSaleYear
             // 
@@ -3647,9 +3642,9 @@
             // tbSaleTot
             // 
             this.tbSaleTot.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSaleTot.Location = new System.Drawing.Point(980, 305);
+            this.tbSaleTot.Location = new System.Drawing.Point(804, 305);
             this.tbSaleTot.Name = "tbSaleTot";
-            this.tbSaleTot.Size = new System.Drawing.Size(111, 27);
+            this.tbSaleTot.Size = new System.Drawing.Size(87, 27);
             this.tbSaleTot.TabIndex = 88;
             this.tbSaleTot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbSaleTot.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -3659,11 +3654,11 @@
             this.label88.AutoSize = true;
             this.label88.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label88.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label88.Location = new System.Drawing.Point(828, 309);
+            this.label88.Location = new System.Drawing.Point(713, 309);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(146, 18);
+            this.label88.Size = new System.Drawing.Size(85, 18);
             this.label88.TabIndex = 87;
-            this.label88.Text = "Current Total Sales:";
+            this.label88.Text = "Total Profit:";
             // 
             // label72
             // 
@@ -3682,7 +3677,7 @@
             this.cbSaleMonth.FormattingEnabled = true;
             this.cbSaleMonth.Items.AddRange(new object[] {
             "January",
-            "Febuary",
+            "February",
             "March",
             "April",
             "May",
@@ -3736,7 +3731,7 @@
             this.btnRe.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRe.ForeColor = System.Drawing.Color.Black;
             this.btnRe.Image = global::DirectSelling.Properties.Resources.Button_Refresh_icon;
-            this.btnRe.Location = new System.Drawing.Point(1069, 21);
+            this.btnRe.Location = new System.Drawing.Point(1069, 20);
             this.btnRe.Name = "btnRe";
             this.btnRe.Size = new System.Drawing.Size(26, 23);
             this.btnRe.TabIndex = 33;
@@ -5012,9 +5007,6 @@
         private System.Windows.Forms.TextBox tbSetUser;
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.Button btnSet;
-        private System.Windows.Forms.Button btnFB;
-        private System.Windows.Forms.Button btnLink;
-        private System.Windows.Forms.Button btnTwit;
         private System.Windows.Forms.Button btnUpCus;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -5026,5 +5018,8 @@
         private System.Windows.Forms.TextBox tbPenalCus;
         private System.Windows.Forms.ComboBox cbSaleYear;
         private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox tbSales;
+        private System.Windows.Forms.Label label102;
     }
 }

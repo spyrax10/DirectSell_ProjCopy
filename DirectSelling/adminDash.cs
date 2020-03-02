@@ -15,8 +15,8 @@ namespace DirectSelling
 {
     public partial class adminDash : Form
     {
-        string prodcs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=sellDB;Integrated Security=True";
-        string councs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=countDB;Integrated Security=True";
+        string prodcs = @"Data Source=LOCALHOST\SQL2019;Initial Catalog=sellDB;Integrated Security=True";
+        string councs = @"Data Source=LOCALHOST\SQL2019;Initial Catalog=countDB;Integrated Security=True";
 
         SqlDataAdapter adapt;
        
@@ -198,7 +198,7 @@ namespace DirectSelling
                 saleCon.Open();
                 DataTable dt = new DataTable();
                 adapt = new SqlDataAdapter("Select Month, cusId as CusID, proId as ProdID, " +
-                    "Qty, Comp as Company, Name, Profit from saleTB where Month = '" + month + "' and saleYear = '" + year + "' " +
+                    "Qty, Comp as Company, Name, Profit, Total from saleTB where Month = '" + month + "' and saleYear = '" + year + "' " +
                     "order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc", saleCon);
                 adapt.Fill(dt);
                 gVSales.DataSource = dt;
@@ -214,6 +214,8 @@ namespace DirectSelling
 
                 double balTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[6].Value));
                 double penalTot = gVPenal.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value));
+                double saleTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value));
+                tbSales.Text = saleTot.ToString();
                 tbSaleTot.Text = balTot.ToString();
                 tbPenalTot.Text = penalTot.ToString();
             }
@@ -224,7 +226,7 @@ namespace DirectSelling
 
         }
          public void saleRep()
-        {
+         {
             SqlConnection saleCon = new SqlConnection(prodcs);
             SqlConnection penalCon = new SqlConnection(prodcs);
 
@@ -233,7 +235,7 @@ namespace DirectSelling
                 saleCon.Open();
                 DataTable dt = new DataTable();
                 adapt = new SqlDataAdapter("Select Month, cusId as CusID, proId as ProdID, " +
-                    "Qty, Comp as Company, Name, Profit from saleTB order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc ", saleCon);          
+                    "Qty, Comp as Company, Name, Profit, Total from saleTB order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc ", saleCon);          
                 adapt.Fill(dt);
                 gVSales.DataSource = dt;            
                 saleCon.Close();
@@ -246,6 +248,13 @@ namespace DirectSelling
                 adapt.Fill(dt2);
                 gVPenal.DataSource = dt2;
                 penalCon.Close();
+
+                double balTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[6].Value));
+                double penalTot = gVPenal.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value));
+                double saleTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value));
+                tbSales.Text = saleTot.ToString();
+                tbSaleTot.Text = balTot.ToString();
+                tbPenalTot.Text = penalTot.ToString();
 
             }
             catch (Exception e)
@@ -301,7 +310,7 @@ namespace DirectSelling
             {
                 saleCon.Open();
                 DataTable dt = new DataTable();
-                adapt = new SqlDataAdapter("Select Month, SUM(Cast(Profit as float)) as Profit, saleYear as Year from saleTB group by Month, saleYear " +
+                adapt = new SqlDataAdapter("Select Month, saleYear as Year, SUM(Cast(Profit as float)) as Profit from saleTB group by Month, saleYear " +
                     "order by DATEPART(mm,CAST([Month]+ ' 1900' AS DATETIME)) asc", saleCon);
                 adapt.Fill(dt);
                 gVHomeSale.DataSource = dt;
@@ -1146,6 +1155,7 @@ namespace DirectSelling
                     string name = (dr["Name"].ToString());
                     string price = (dr["SRP"].ToString());
                     string quan = (dr["Qty"].ToString());
+                    double tot = Double.Parse(quan) * Double.Parse(price);
 
                     double profit = Double.Parse(rate) * Double.Parse(price) * Double.Parse(quan);
                     string pro = profit.ToString();
@@ -1162,7 +1172,8 @@ namespace DirectSelling
                         "'" + date + "', " +
                         "'" + month + "', " +
                         "'" + pro + "', " +
-                        "'" + year + "')";
+                        "'" + year + "', " +
+                        "'" + tot.ToString() + "')";
                     proCmd.ExecuteNonQuery();
 
                 }
@@ -1460,7 +1471,7 @@ namespace DirectSelling
                 adapt = new SqlDataAdapter("Select ordId as OrdID, cusId as CusID, " +
                     "DateOrd as DateOrdered, DateRecv as DateReceived, DateDead as DueDate, curBal as CurrentBal, penalDate as DatePenal, " +
                     "penalty as Penalty, newBal as NewBal from penaltyTB where ordId LIKE '%" + value + "%' OR cusId LIKE '%" + value + "%' " +
-                    "penalty != 0 order by ordId ASC, Cast (penalDate as DATETIME)", con);
+                    "and penalty != 0 order by ordId ASC, Cast (penalDate as DATETIME)", con);
                 adapt.Fill(dt);
                 gVPenal.DataSource = dt;
                 con.Close();
@@ -1518,7 +1529,7 @@ namespace DirectSelling
 
                 resCon.Open();
                 DataTable dt = new DataTable();
-                adapt = new SqlDataAdapter("Select payId As PayID, cusId As CusID, prodId as ProdID, Date, Time, Cash from cusPayTB Order By payId ASC", resCon);
+                adapt = new SqlDataAdapter("Select payId As PayID, cusId As CusID, prodId as ProdID, Date, Time, Cash as Payment from cusPayTB Order By payId ASC", resCon);
                 adapt.Fill(dt);
                 gVPResc.DataSource = dt;
                 resCon.Close();
@@ -2367,11 +2378,16 @@ namespace DirectSelling
             panelSlide.Height = btnSales.Height;
             panelSlide.Top = btnSales.Top;
             tabControl1.TabPages.Clear();
-            cbSaleMonth.Text = null;
-            saleRep();         
+            cbSaleMonth.Text = "";
+            saleRep();
+            cbSaleYear.Text = "";
+            tbPenalCus.ForeColor = Color.Gray;
+            tbPenalCus.Text = "Search Here";
             tabControl1.TabPages.Insert(6, tabSales);
             double balTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[6].Value));
             double penalTot = gVPenal.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value));
+            double saleTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value));
+            tbSales.Text = saleTot.ToString();
             tbSaleTot.Text = balTot.ToString();
             tbPenalTot.Text = penalTot.ToString();
         }
@@ -3236,6 +3252,20 @@ namespace DirectSelling
             {
                 cbSale();
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            saleRep();
+            cbSaleYear.Text = "";
+            tbPenalCus.ForeColor = Color.Gray;
+            tbPenalCus.Text = "Search Here";
+            double balTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[6].Value));
+            double penalTot = gVPenal.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value));
+            double saleTot = gVSales.Rows.Cast<DataGridViewRow>().Sum(t => Convert.ToDouble(t.Cells[7].Value));
+            tbSales.Text = saleTot.ToString();
+            tbSaleTot.Text = balTot.ToString();
+            tbPenalTot.Text = penalTot.ToString();
         }
     }
 }

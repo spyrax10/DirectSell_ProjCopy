@@ -17,7 +17,7 @@ namespace DirectSelling
     public partial class Login : Form
     {
         
-        string prodcs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=sellDB;Integrated Security=True";
+        string prodcs = @"Data Source=LOCALHOST\SQL2019;Initial Catalog=sellDB;Integrated Security=True";
        
         [DllImport("wininet.dll")]
         private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);

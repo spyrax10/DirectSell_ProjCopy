@@ -112,7 +112,7 @@
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.Color.Gray;
+            this.label59.ForeColor = System.Drawing.Color.Lime;
             this.label59.Location = new System.Drawing.Point(21, 48);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(60, 16);
@@ -132,9 +132,9 @@
             // 
             // tbOrdInfo
             // 
-            this.tbOrdInfo.BackColor = System.Drawing.Color.Black;
+            this.tbOrdInfo.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbOrdInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOrdInfo.ForeColor = System.Drawing.Color.White;
+            this.tbOrdInfo.ForeColor = System.Drawing.Color.Black;
             this.tbOrdInfo.Location = new System.Drawing.Point(111, 248);
             this.tbOrdInfo.Name = "tbOrdInfo";
             this.tbOrdInfo.Size = new System.Drawing.Size(193, 27);
@@ -143,7 +143,7 @@
             // 
             // gbNewOrdInfo
             // 
-            this.gbNewOrdInfo.BackColor = System.Drawing.Color.Black;
+            this.gbNewOrdInfo.BackColor = System.Drawing.Color.DodgerBlue;
             this.gbNewOrdInfo.Controls.Add(this.btnCashBack);
             this.gbNewOrdInfo.Controls.Add(this.lblOrdId);
             this.gbNewOrdInfo.Controls.Add(this.label59);
@@ -173,7 +173,7 @@
             this.gbNewOrdInfo.Controls.Add(this.cbOrdMonth);
             this.gbNewOrdInfo.Controls.Add(this.label5);
             this.gbNewOrdInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbNewOrdInfo.ForeColor = System.Drawing.Color.Red;
+            this.gbNewOrdInfo.ForeColor = System.Drawing.Color.Yellow;
             this.gbNewOrdInfo.Location = new System.Drawing.Point(12, 12);
             this.gbNewOrdInfo.Name = "gbNewOrdInfo";
             this.gbNewOrdInfo.Size = new System.Drawing.Size(334, 416);
@@ -197,8 +197,8 @@
             // 
             // numRate
             // 
-            this.numRate.BackColor = System.Drawing.Color.Black;
-            this.numRate.ForeColor = System.Drawing.Color.White;
+            this.numRate.BackColor = System.Drawing.Color.DodgerBlue;
+            this.numRate.ForeColor = System.Drawing.Color.Black;
             this.numRate.Location = new System.Drawing.Point(244, 314);
             this.numRate.Name = "numRate";
             this.numRate.Size = new System.Drawing.Size(40, 27);
@@ -213,7 +213,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label35.ForeColor = System.Drawing.Color.White;
             this.label35.Location = new System.Drawing.Point(10, 252);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(95, 18);
@@ -224,7 +224,7 @@
             // 
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label57.ForeColor = System.Drawing.Color.White;
             this.label57.Location = new System.Drawing.Point(161, 317);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(84, 18);
@@ -235,7 +235,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(65, 284);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(40, 18);
@@ -244,9 +244,9 @@
             // 
             // tbOrdQty
             // 
-            this.tbOrdQty.BackColor = System.Drawing.Color.Black;
+            this.tbOrdQty.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbOrdQty.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOrdQty.ForeColor = System.Drawing.Color.White;
+            this.tbOrdQty.ForeColor = System.Drawing.Color.Black;
             this.tbOrdQty.Location = new System.Drawing.Point(111, 281);
             this.tbOrdQty.Name = "tbOrdQty";
             this.tbOrdQty.Size = new System.Drawing.Size(36, 27);
@@ -254,9 +254,9 @@
             // 
             // tbOrdSize
             // 
-            this.tbOrdSize.BackColor = System.Drawing.Color.Black;
+            this.tbOrdSize.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbOrdSize.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOrdSize.ForeColor = System.Drawing.Color.White;
+            this.tbOrdSize.ForeColor = System.Drawing.Color.Black;
             this.tbOrdSize.Location = new System.Drawing.Point(202, 281);
             this.tbOrdSize.Name = "tbOrdSize";
             this.tbOrdSize.Size = new System.Drawing.Size(102, 27);
@@ -267,7 +267,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(48, 219);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(57, 18);
@@ -276,7 +276,7 @@
             // 
             // btnClr
             // 
-            this.btnClr.BackColor = System.Drawing.Color.Black;
+            this.btnClr.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnClr.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnClr.FlatAppearance.BorderSize = 0;
             this.btnClr.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
@@ -293,7 +293,7 @@
             // 
             // btnAddOrd
             // 
-            this.btnAddOrd.BackColor = System.Drawing.Color.Black;
+            this.btnAddOrd.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAddOrd.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
             this.btnAddOrd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnAddOrd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
@@ -310,9 +310,9 @@
             // 
             // tbOrdBrand
             // 
-            this.tbOrdBrand.BackColor = System.Drawing.Color.Black;
+            this.tbOrdBrand.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbOrdBrand.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOrdBrand.ForeColor = System.Drawing.Color.White;
+            this.tbOrdBrand.ForeColor = System.Drawing.Color.Black;
             this.tbOrdBrand.Location = new System.Drawing.Point(111, 182);
             this.tbOrdBrand.Name = "tbOrdBrand";
             this.tbOrdBrand.Size = new System.Drawing.Size(193, 27);
@@ -323,7 +323,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(68, 320);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 18);
@@ -332,9 +332,9 @@
             // 
             // tbOrdSrp
             // 
-            this.tbOrdSrp.BackColor = System.Drawing.Color.Black;
+            this.tbOrdSrp.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbOrdSrp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOrdSrp.ForeColor = System.Drawing.Color.White;
+            this.tbOrdSrp.ForeColor = System.Drawing.Color.Black;
             this.tbOrdSrp.Location = new System.Drawing.Point(111, 314);
             this.tbOrdSrp.Name = "tbOrdSrp";
             this.tbOrdSrp.Size = new System.Drawing.Size(47, 27);
@@ -342,9 +342,9 @@
             // 
             // cbOrdCat
             // 
-            this.cbOrdCat.BackColor = System.Drawing.Color.Black;
+            this.cbOrdCat.BackColor = System.Drawing.Color.DodgerBlue;
             this.cbOrdCat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOrdCat.ForeColor = System.Drawing.Color.White;
+            this.cbOrdCat.ForeColor = System.Drawing.Color.Black;
             this.cbOrdCat.FormattingEnabled = true;
             this.cbOrdCat.Items.AddRange(new object[] {
             "Perfumes",
@@ -367,9 +367,9 @@
             // 
             // tbOrdName
             // 
-            this.tbOrdName.BackColor = System.Drawing.Color.Black;
+            this.tbOrdName.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbOrdName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOrdName.ForeColor = System.Drawing.Color.White;
+            this.tbOrdName.ForeColor = System.Drawing.Color.Black;
             this.tbOrdName.Location = new System.Drawing.Point(111, 215);
             this.tbOrdName.Name = "tbOrdName";
             this.tbOrdName.Size = new System.Drawing.Size(193, 27);
@@ -380,7 +380,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(23, 120);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(82, 18);
@@ -391,7 +391,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(50, 186);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(55, 18);
@@ -400,9 +400,9 @@
             // 
             // tbOrdPage
             // 
-            this.tbOrdPage.BackColor = System.Drawing.Color.Black;
+            this.tbOrdPage.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbOrdPage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOrdPage.ForeColor = System.Drawing.Color.White;
+            this.tbOrdPage.ForeColor = System.Drawing.Color.Black;
             this.tbOrdPage.Location = new System.Drawing.Point(262, 149);
             this.tbOrdPage.Name = "tbOrdPage";
             this.tbOrdPage.Size = new System.Drawing.Size(42, 27);
@@ -412,7 +412,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label25.ForeColor = System.Drawing.Color.White;
             this.label25.Location = new System.Drawing.Point(21, 90);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(84, 18);
@@ -423,7 +423,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(155, 285);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 18);
@@ -432,9 +432,9 @@
             // 
             // cbOrdComp
             // 
-            this.cbOrdComp.BackColor = System.Drawing.Color.Black;
+            this.cbOrdComp.BackColor = System.Drawing.Color.DodgerBlue;
             this.cbOrdComp.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOrdComp.ForeColor = System.Drawing.Color.White;
+            this.cbOrdComp.ForeColor = System.Drawing.Color.Black;
             this.cbOrdComp.FormattingEnabled = true;
             this.cbOrdComp.Items.AddRange(new object[] {
             "Avon",
@@ -451,7 +451,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label28.ForeColor = System.Drawing.Color.White;
             this.label28.Location = new System.Drawing.Point(47, 150);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(58, 18);
@@ -460,9 +460,9 @@
             // 
             // cbOrdMonth
             // 
-            this.cbOrdMonth.BackColor = System.Drawing.Color.Black;
+            this.cbOrdMonth.BackColor = System.Drawing.Color.DodgerBlue;
             this.cbOrdMonth.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbOrdMonth.ForeColor = System.Drawing.Color.White;
+            this.cbOrdMonth.ForeColor = System.Drawing.Color.Black;
             this.cbOrdMonth.FormattingEnabled = true;
             this.cbOrdMonth.Items.AddRange(new object[] {
             "January",
@@ -487,7 +487,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(215, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 18);
@@ -498,7 +498,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label24.ForeColor = System.Drawing.Color.White;
             this.label24.Location = new System.Drawing.Point(36, 48);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(46, 18);
@@ -509,7 +509,7 @@
             // 
             this.lblOrdDate.AutoSize = true;
             this.lblOrdDate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrdDate.ForeColor = System.Drawing.Color.SlateGray;
+            this.lblOrdDate.ForeColor = System.Drawing.Color.Lime;
             this.lblOrdDate.Location = new System.Drawing.Point(85, 15);
             this.lblOrdDate.Name = "lblOrdDate";
             this.lblOrdDate.Size = new System.Drawing.Size(47, 18);
@@ -518,10 +518,10 @@
             // 
             // tbOrdTot
             // 
-            this.tbOrdTot.BackColor = System.Drawing.Color.Black;
+            this.tbOrdTot.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbOrdTot.Enabled = false;
             this.tbOrdTot.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOrdTot.ForeColor = System.Drawing.Color.White;
+            this.tbOrdTot.ForeColor = System.Drawing.Color.Black;
             this.tbOrdTot.Location = new System.Drawing.Point(440, 340);
             this.tbOrdTot.Name = "tbOrdTot";
             this.tbOrdTot.Size = new System.Drawing.Size(129, 27);
@@ -531,7 +531,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label23.ForeColor = System.Drawing.Color.White;
             this.label23.Location = new System.Drawing.Point(36, 15);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(47, 18);
@@ -540,10 +540,10 @@
             // 
             // tbOrdId
             // 
-            this.tbOrdId.BackColor = System.Drawing.Color.Black;
+            this.tbOrdId.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbOrdId.Enabled = false;
             this.tbOrdId.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOrdId.ForeColor = System.Drawing.Color.White;
+            this.tbOrdId.ForeColor = System.Drawing.Color.Black;
             this.tbOrdId.Location = new System.Drawing.Point(440, 7);
             this.tbOrdId.Name = "tbOrdId";
             this.tbOrdId.Size = new System.Drawing.Size(129, 23);
@@ -553,7 +553,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.SlateGray;
+            this.label22.ForeColor = System.Drawing.Color.Lime;
             this.label22.Location = new System.Drawing.Point(335, 10);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(99, 16);
@@ -562,7 +562,7 @@
             // 
             // paneReceipt
             // 
-            this.paneReceipt.BackColor = System.Drawing.Color.Black;
+            this.paneReceipt.BackColor = System.Drawing.Color.DodgerBlue;
             this.paneReceipt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.paneReceipt.Controls.Add(this.btnOrdDel);
             this.paneReceipt.Controls.Add(this.lblOrdItem);
@@ -617,7 +617,7 @@
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label58.ForeColor = System.Drawing.Color.White;
             this.label58.Location = new System.Drawing.Point(36, 344);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(50, 18);
@@ -639,7 +639,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.SlateGray;
+            this.label37.ForeColor = System.Drawing.Color.Lime;
             this.label37.Location = new System.Drawing.Point(344, 50);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(90, 16);
@@ -648,7 +648,7 @@
             // 
             // btnOrdCon
             // 
-            this.btnOrdCon.BackColor = System.Drawing.Color.Black;
+            this.btnOrdCon.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnOrdCon.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
             this.btnOrdCon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnOrdCon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
@@ -669,7 +669,7 @@
             this.gVOrdRec.AllowUserToDeleteRows = false;
             this.gVOrdRec.AllowUserToResizeRows = false;
             this.gVOrdRec.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gVOrdRec.BackgroundColor = System.Drawing.Color.Black;
+            this.gVOrdRec.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.gVOrdRec.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
@@ -688,14 +688,14 @@
             this.colPrice,
             this.colOrdTot});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gVOrdRec.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gVOrdRec.GridColor = System.Drawing.Color.DodgerBlue;
+            this.gVOrdRec.GridColor = System.Drawing.Color.Lime;
             this.gVOrdRec.Location = new System.Drawing.Point(39, 87);
             this.gVOrdRec.Name = "gVOrdRec";
             this.gVOrdRec.ReadOnly = true;
@@ -757,7 +757,7 @@
             // 
             this.lblOrdTime.AutoSize = true;
             this.lblOrdTime.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOrdTime.ForeColor = System.Drawing.Color.SlateGray;
+            this.lblOrdTime.ForeColor = System.Drawing.Color.Lime;
             this.lblOrdTime.Location = new System.Drawing.Point(85, 48);
             this.lblOrdTime.Name = "lblOrdTime";
             this.lblOrdTime.Size = new System.Drawing.Size(46, 18);
@@ -768,7 +768,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(388, 344);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 18);

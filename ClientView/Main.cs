@@ -17,15 +17,15 @@ namespace ClientView
         int move = 0;
         int left = 5;
 
-        string cs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=sellDB;Integrated Security=True";
-        string councs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=countDB;Integrated Security=True"; 
+        string cs = @"Data Source=LOCALHOST\SQL2019;Initial Catalog=sellDB;Integrated Security=True";
+      
         SqlDataAdapter adapt;
         public Main()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.Manual;
-            Rectangle workingArea = Screen.GetWorkingArea(this);
-            this.Location = new Point(workingArea.Right - Size.Width, workingArea.Bottom - Size.Height);
+            //this.StartPosition = FormStartPosition.Manual;
+            //Rectangle workingArea = Screen.GetWorkingArea(this);
+            //this.Location = new Point(workingArea.Right - Size.Width, workingArea.Bottom - Size.Height);
           
         }
         public void cellBal()

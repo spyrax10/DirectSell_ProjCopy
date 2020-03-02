@@ -49,9 +49,6 @@
             this.paneDet = new System.Windows.Forms.Panel();
             this.gVPenal = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnFB = new System.Windows.Forms.Button();
-            this.btnLink = new System.Windows.Forms.Button();
-            this.btnTwit = new System.Windows.Forms.Button();
             this.lblDue = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.gVPenOrd = new System.Windows.Forms.DataGridView();
@@ -97,7 +94,7 @@
             // 
             // paneMain
             // 
-            this.paneMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.paneMain.BackColor = System.Drawing.Color.DodgerBlue;
             this.paneMain.Controls.Add(this.paneDet);
             this.paneMain.Controls.Add(this.paneID);
             this.paneMain.Controls.Add(this.paneLogo);
@@ -109,12 +106,9 @@
             // 
             // paneDet
             // 
-            this.paneDet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.paneDet.BackColor = System.Drawing.Color.DodgerBlue;
             this.paneDet.Controls.Add(this.gVPenal);
             this.paneDet.Controls.Add(this.label10);
-            this.paneDet.Controls.Add(this.btnFB);
-            this.paneDet.Controls.Add(this.btnLink);
-            this.paneDet.Controls.Add(this.btnTwit);
             this.paneDet.Controls.Add(this.lblDue);
             this.paneDet.Controls.Add(this.label11);
             this.paneDet.Controls.Add(this.gVPenOrd);
@@ -142,7 +136,7 @@
             this.gVPenal.AllowUserToDeleteRows = false;
             this.gVPenal.AllowUserToResizeRows = false;
             this.gVPenal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gVPenal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gVPenal.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.gVPenal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -154,14 +148,14 @@
             this.gVPenal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gVPenal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gVPenal.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gVPenal.GridColor = System.Drawing.Color.DodgerBlue;
+            this.gVPenal.GridColor = System.Drawing.Color.Lime;
             this.gVPenal.Location = new System.Drawing.Point(400, 320);
             this.gVPenal.Name = "gVPenal";
             this.gVPenal.ReadOnly = true;
@@ -182,51 +176,12 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Lime;
+            this.label10.ForeColor = System.Drawing.Color.Yellow;
             this.label10.Location = new System.Drawing.Point(750, 298);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(131, 19);
             this.label10.TabIndex = 101;
             this.label10.Text = "Penalty Tracker:";
-            // 
-            // btnFB
-            // 
-            this.btnFB.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnFB.FlatAppearance.BorderSize = 0;
-            this.btnFB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFB.Image = global::ClientView.Properties.Resources.social_facebook_box_blue_icon;
-            this.btnFB.Location = new System.Drawing.Point(803, 447);
-            this.btnFB.Name = "btnFB";
-            this.btnFB.Size = new System.Drawing.Size(22, 23);
-            this.btnFB.TabIndex = 100;
-            this.btnFB.UseVisualStyleBackColor = true;
-            this.btnFB.Click += new System.EventHandler(this.btnFB_Click);
-            // 
-            // btnLink
-            // 
-            this.btnLink.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnLink.FlatAppearance.BorderSize = 0;
-            this.btnLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLink.Image = global::ClientView.Properties.Resources.linkedin_icon;
-            this.btnLink.Location = new System.Drawing.Point(859, 447);
-            this.btnLink.Name = "btnLink";
-            this.btnLink.Size = new System.Drawing.Size(22, 23);
-            this.btnLink.TabIndex = 99;
-            this.btnLink.UseVisualStyleBackColor = true;
-            this.btnLink.Click += new System.EventHandler(this.btnLink_Click);
-            // 
-            // btnTwit
-            // 
-            this.btnTwit.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnTwit.FlatAppearance.BorderSize = 0;
-            this.btnTwit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTwit.Image = global::ClientView.Properties.Resources.twitter_icon;
-            this.btnTwit.Location = new System.Drawing.Point(831, 447);
-            this.btnTwit.Name = "btnTwit";
-            this.btnTwit.Size = new System.Drawing.Size(22, 23);
-            this.btnTwit.TabIndex = 98;
-            this.btnTwit.UseVisualStyleBackColor = true;
-            this.btnTwit.Click += new System.EventHandler(this.btnTwit_Click);
             // 
             // lblDue
             // 
@@ -243,7 +198,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(388, 110);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 16);
@@ -256,7 +211,7 @@
             this.gVPenOrd.AllowUserToDeleteRows = false;
             this.gVPenOrd.AllowUserToResizeRows = false;
             this.gVPenOrd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gVPenOrd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gVPenOrd.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.gVPenOrd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -268,14 +223,14 @@
             this.gVPenOrd.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gVPenOrd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gVPenOrd.DefaultCellStyle = dataGridViewCellStyle5;
-            this.gVPenOrd.GridColor = System.Drawing.Color.DodgerBlue;
+            this.gVPenOrd.GridColor = System.Drawing.Color.Lime;
             this.gVPenOrd.Location = new System.Drawing.Point(544, 31);
             this.gVPenOrd.Name = "gVPenOrd";
             this.gVPenOrd.ReadOnly = true;
@@ -296,7 +251,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(204, 110);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 16);
@@ -307,7 +262,7 @@
             // 
             this.lblRecv.AutoSize = true;
             this.lblRecv.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecv.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblRecv.ForeColor = System.Drawing.Color.White;
             this.lblRecv.Location = new System.Drawing.Point(309, 110);
             this.lblRecv.Name = "lblRecv";
             this.lblRecv.Size = new System.Drawing.Size(43, 16);
@@ -318,7 +273,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Lime;
+            this.label3.ForeColor = System.Drawing.Color.Yellow;
             this.label3.Location = new System.Drawing.Point(540, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 19);
@@ -345,7 +300,7 @@
             this.gVPay.AllowUserToDeleteRows = false;
             this.gVPay.AllowUserToResizeRows = false;
             this.gVPay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gVPay.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gVPay.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.gVPay.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -357,14 +312,14 @@
             this.gVPay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.gVPay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gVPay.DefaultCellStyle = dataGridViewCellStyle8;
-            this.gVPay.GridColor = System.Drawing.Color.DodgerBlue;
+            this.gVPay.GridColor = System.Drawing.Color.Lime;
             this.gVPay.Location = new System.Drawing.Point(12, 320);
             this.gVPay.Name = "gVPay";
             this.gVPay.ReadOnly = true;
@@ -385,7 +340,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Lime;
+            this.label9.ForeColor = System.Drawing.Color.Yellow;
             this.label9.Location = new System.Drawing.Point(8, 298);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(143, 19);
@@ -398,7 +353,7 @@
             this.gVBal.AllowUserToDeleteRows = false;
             this.gVBal.AllowUserToResizeRows = false;
             this.gVBal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gVBal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gVBal.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.gVBal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -410,14 +365,14 @@
             this.gVBal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.gVBal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gVBal.DefaultCellStyle = dataGridViewCellStyle11;
-            this.gVBal.GridColor = System.Drawing.Color.DodgerBlue;
+            this.gVBal.GridColor = System.Drawing.Color.Lime;
             this.gVBal.Location = new System.Drawing.Point(458, 129);
             this.gVBal.Name = "gVBal";
             this.gVBal.ReadOnly = true;
@@ -440,7 +395,7 @@
             this.gVBalDet.AllowUserToDeleteRows = false;
             this.gVBalDet.AllowUserToResizeRows = false;
             this.gVBalDet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gVBalDet.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gVBalDet.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.gVBalDet.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -452,14 +407,14 @@
             this.gVBalDet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.gVBalDet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.DodgerBlue;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gVBalDet.DefaultCellStyle = dataGridViewCellStyle14;
-            this.gVBalDet.GridColor = System.Drawing.Color.DodgerBlue;
+            this.gVBalDet.GridColor = System.Drawing.Color.Lime;
             this.gVBalDet.Location = new System.Drawing.Point(12, 129);
             this.gVBalDet.Name = "gVBalDet";
             this.gVBalDet.ReadOnly = true;
@@ -481,7 +436,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Lime;
+            this.label5.ForeColor = System.Drawing.Color.Yellow;
             this.label5.Location = new System.Drawing.Point(8, 107);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(170, 19);
@@ -508,7 +463,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label8.ForeColor = System.Drawing.Color.Lime;
             this.label8.Location = new System.Drawing.Point(390, 8);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 19);
@@ -563,7 +518,7 @@
             // 
             this.lblCusID.AutoSize = true;
             this.lblCusID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCusID.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblCusID.ForeColor = System.Drawing.Color.Lime;
             this.lblCusID.Location = new System.Drawing.Point(154, 8);
             this.lblCusID.Name = "lblCusID";
             this.lblCusID.Size = new System.Drawing.Size(54, 19);
@@ -574,7 +529,7 @@
             // 
             this.lblCusName.AutoSize = true;
             this.lblCusName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCusName.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblCusName.ForeColor = System.Drawing.Color.Lime;
             this.lblCusName.Location = new System.Drawing.Point(154, 40);
             this.lblCusName.Name = "lblCusName";
             this.lblCusName.Size = new System.Drawing.Size(54, 19);
@@ -583,7 +538,7 @@
             // 
             // paneID
             // 
-            this.paneID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.paneID.BackColor = System.Drawing.Color.DodgerBlue;
             this.paneID.Controls.Add(this.tbID);
             this.paneID.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paneID.ForeColor = System.Drawing.Color.Lime;
@@ -596,10 +551,10 @@
             // 
             // tbID
             // 
-            this.tbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbID.BackColor = System.Drawing.Color.DodgerBlue;
             this.tbID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tbID.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbID.ForeColor = System.Drawing.Color.White;
+            this.tbID.ForeColor = System.Drawing.Color.Black;
             this.tbID.Location = new System.Drawing.Point(44, 64);
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(295, 33);
@@ -609,7 +564,7 @@
             // 
             // paneLogo
             // 
-            this.paneLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.paneLogo.BackColor = System.Drawing.Color.DodgerBlue;
             this.paneLogo.Controls.Add(this.pictureBox4);
             this.paneLogo.Controls.Add(this.label1);
             this.paneLogo.Controls.Add(this.panel1);
@@ -631,7 +586,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.BackColor = System.Drawing.Color.DodgerBlue;
             this.label1.Font = new System.Drawing.Font("Lucida Calligraphy", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(102, 26);
@@ -652,7 +607,7 @@
             // 
             // paneSlide
             // 
-            this.paneSlide.BackColor = System.Drawing.Color.DodgerBlue;
+            this.paneSlide.BackColor = System.Drawing.Color.Black;
             this.paneSlide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.paneSlide.Location = new System.Drawing.Point(382, -1);
             this.paneSlide.Name = "paneSlide";
@@ -682,7 +637,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Main";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Client Dashboard";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.paneMain.ResumeLayout(false);
@@ -738,9 +693,6 @@
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.DataGridView gVPenOrd;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnLink;
-        private System.Windows.Forms.Button btnTwit;
-        private System.Windows.Forms.Button btnFB;
         public System.Windows.Forms.DataGridView gVPenal;
         private System.Windows.Forms.Label label10;
     }

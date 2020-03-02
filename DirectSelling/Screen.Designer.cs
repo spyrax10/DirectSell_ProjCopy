@@ -33,19 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Screen));
             this.paneScreen = new System.Windows.Forms.Panel();
-            this.btnShut = new System.Windows.Forms.Button();
-            this.paneLogo = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.paneSlide = new System.Windows.Forms.Panel();
-            this.gBTrans = new System.Windows.Forms.GroupBox();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnoOd = new System.Windows.Forms.Button();
-            this.btnCash = new System.Windows.Forms.Button();
             this.paneCash = new System.Windows.Forms.Panel();
             this.gbOrdCusId = new System.Windows.Forms.GroupBox();
+            this.btnOut = new System.Windows.Forms.Button();
             this.tbOrdCusID = new System.Windows.Forms.TextBox();
             this.btnOrdHome = new System.Windows.Forms.Button();
             this.gBCusID = new System.Windows.Forms.GroupBox();
@@ -130,16 +120,22 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.btnShut = new System.Windows.Forms.Button();
+            this.paneLogo = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.paneSlide = new System.Windows.Forms.Panel();
+            this.gBTrans = new System.Windows.Forms.GroupBox();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnoOd = new System.Windows.Forms.Button();
+            this.btnCash = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.printCash = new System.Drawing.Printing.PrintDocument();
-            this.btnOut = new System.Windows.Forms.Button();
             this.paneScreen.SuspendLayout();
-            this.paneLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.gBTrans.SuspendLayout();
             this.paneCash.SuspendLayout();
             this.gbOrdCusId.SuspendLayout();
             this.gBCusID.SuspendLayout();
@@ -148,6 +144,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gVCash)).BeginInit();
             this.gbCashCusCre.SuspendLayout();
             this.gbCashOrdInfo.SuspendLayout();
+            this.paneLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.gBTrans.SuspendLayout();
             this.SuspendLayout();
             // 
             // paneScreen
@@ -155,168 +155,15 @@
             this.paneScreen.BackColor = System.Drawing.Color.White;
             this.paneScreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.paneScreen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneScreen.Controls.Add(this.paneCash);
             this.paneScreen.Controls.Add(this.btnShut);
             this.paneScreen.Controls.Add(this.paneLogo);
-            this.paneScreen.Controls.Add(this.paneCash);
             this.paneScreen.Controls.Add(this.gBTrans);
             this.paneScreen.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paneScreen.Location = new System.Drawing.Point(12, 12);
             this.paneScreen.Name = "paneScreen";
             this.paneScreen.Size = new System.Drawing.Size(1336, 701);
             this.paneScreen.TabIndex = 6;
-            // 
-            // btnShut
-            // 
-            this.btnShut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShut.FlatAppearance.BorderSize = 0;
-            this.btnShut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnShut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.btnShut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShut.Image = global::DirectSelling.Properties.Resources.Apps_Dialog_Shutdown_icon;
-            this.btnShut.Location = new System.Drawing.Point(1294, 3);
-            this.btnShut.Name = "btnShut";
-            this.btnShut.Size = new System.Drawing.Size(39, 38);
-            this.btnShut.TabIndex = 7;
-            this.btnShut.UseVisualStyleBackColor = true;
-            this.btnShut.Click += new System.EventHandler(this.btnShut_Click);
-            // 
-            // paneLogo
-            // 
-            this.paneLogo.Controls.Add(this.pictureBox4);
-            this.paneLogo.Controls.Add(this.label1);
-            this.paneLogo.Controls.Add(this.panel1);
-            this.paneLogo.Location = new System.Drawing.Point(704, 585);
-            this.paneLogo.Name = "paneLogo";
-            this.paneLogo.Size = new System.Drawing.Size(615, 95);
-            this.paneLogo.TabIndex = 3;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = global::DirectSelling.Properties.Resources.Bonsai_Tablet_point_of_sale_restaurant_updated_items_SR17_10R1;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(89, 86);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(101, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(504, 36);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Direct Selling Management System";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.paneSlide);
-            this.panel1.Location = new System.Drawing.Point(108, 75);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(497, 13);
-            this.panel1.TabIndex = 2;
-            // 
-            // paneSlide
-            // 
-            this.paneSlide.BackColor = System.Drawing.Color.Black;
-            this.paneSlide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.paneSlide.Location = new System.Drawing.Point(382, -1);
-            this.paneSlide.Name = "paneSlide";
-            this.paneSlide.Size = new System.Drawing.Size(114, 15);
-            this.paneSlide.TabIndex = 3;
-            // 
-            // gBTrans
-            // 
-            this.gBTrans.Controls.Add(this.btnHome);
-            this.gBTrans.Controls.Add(this.label2);
-            this.gBTrans.Controls.Add(this.btnoOd);
-            this.gBTrans.Controls.Add(this.btnCash);
-            this.gBTrans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gBTrans.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBTrans.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.gBTrans.Location = new System.Drawing.Point(487, 239);
-            this.gBTrans.Name = "gBTrans";
-            this.gBTrans.Size = new System.Drawing.Size(361, 221);
-            this.gBTrans.TabIndex = 8;
-            this.gBTrans.TabStop = false;
-            this.gBTrans.Text = "SELECT TRANSACTION:";
-            // 
-            // btnHome
-            // 
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnHome.FlatAppearance.BorderSize = 2;
-            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.Black;
-            this.btnHome.Image = global::DirectSelling.Properties.Resources.One_storied_house_icon__1_;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(98, 163);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(188, 38);
-            this.btnHome.TabIndex = 3;
-            this.btnHome.Text = "GO TO DASHBOARD";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(159, 137);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "-or-";
-            // 
-            // btnoOd
-            // 
-            this.btnoOd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnoOd.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnoOd.FlatAppearance.BorderSize = 2;
-            this.btnoOd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnoOd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnoOd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnoOd.ForeColor = System.Drawing.Color.Black;
-            this.btnoOd.Image = global::DirectSelling.Properties.Resources.Cart_icon__1_;
-            this.btnoOd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnoOd.Location = new System.Drawing.Point(200, 72);
-            this.btnoOd.Name = "btnoOd";
-            this.btnoOd.Size = new System.Drawing.Size(136, 62);
-            this.btnoOd.TabIndex = 1;
-            this.btnoOd.Text = "ORDER";
-            this.btnoOd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnoOd.UseVisualStyleBackColor = true;
-            this.btnoOd.Click += new System.EventHandler(this.btnoOd_Click);
-            // 
-            // btnCash
-            // 
-            this.btnCash.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCash.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnCash.FlatAppearance.BorderSize = 2;
-            this.btnCash.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnCash.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.btnCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCash.ForeColor = System.Drawing.Color.Black;
-            this.btnCash.Image = global::DirectSelling.Properties.Resources.cash_icon__1_;
-            this.btnCash.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCash.Location = new System.Drawing.Point(29, 72);
-            this.btnCash.Name = "btnCash";
-            this.btnCash.Size = new System.Drawing.Size(136, 62);
-            this.btnCash.TabIndex = 0;
-            this.btnCash.Text = "SHOP";
-            this.btnCash.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCash.UseVisualStyleBackColor = true;
-            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
             // 
             // paneCash
             // 
@@ -352,6 +199,19 @@
             this.gbOrdCusId.TabIndex = 93;
             this.gbOrdCusId.TabStop = false;
             this.gbOrdCusId.Text = "Enter Customer ID:";
+            // 
+            // btnOut
+            // 
+            this.btnOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOut.FlatAppearance.BorderSize = 0;
+            this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOut.Image = global::DirectSelling.Properties.Resources.Button_Close_icon_16_;
+            this.btnOut.Location = new System.Drawing.Point(305, 13);
+            this.btnOut.Name = "btnOut";
+            this.btnOut.Size = new System.Drawing.Size(22, 23);
+            this.btnOut.TabIndex = 106;
+            this.btnOut.UseVisualStyleBackColor = true;
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
             // 
             // tbOrdCusID
             // 
@@ -1382,6 +1242,159 @@
             this.label32.TabIndex = 50;
             this.label32.Text = "Size:";
             // 
+            // btnShut
+            // 
+            this.btnShut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShut.FlatAppearance.BorderSize = 0;
+            this.btnShut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnShut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnShut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShut.Image = global::DirectSelling.Properties.Resources.Apps_Dialog_Shutdown_icon;
+            this.btnShut.Location = new System.Drawing.Point(1294, 3);
+            this.btnShut.Name = "btnShut";
+            this.btnShut.Size = new System.Drawing.Size(39, 38);
+            this.btnShut.TabIndex = 7;
+            this.btnShut.UseVisualStyleBackColor = true;
+            this.btnShut.Click += new System.EventHandler(this.btnShut_Click);
+            // 
+            // paneLogo
+            // 
+            this.paneLogo.Controls.Add(this.pictureBox4);
+            this.paneLogo.Controls.Add(this.label1);
+            this.paneLogo.Controls.Add(this.panel1);
+            this.paneLogo.Location = new System.Drawing.Point(704, 585);
+            this.paneLogo.Name = "paneLogo";
+            this.paneLogo.Size = new System.Drawing.Size(615, 95);
+            this.paneLogo.TabIndex = 3;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Image = global::DirectSelling.Properties.Resources.Bonsai_Tablet_point_of_sale_restaurant_updated_items_SR17_10R1;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(89, 86);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(101, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(504, 36);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Direct Selling Management System";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.paneSlide);
+            this.panel1.Location = new System.Drawing.Point(108, 75);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(497, 13);
+            this.panel1.TabIndex = 2;
+            // 
+            // paneSlide
+            // 
+            this.paneSlide.BackColor = System.Drawing.Color.Black;
+            this.paneSlide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneSlide.Location = new System.Drawing.Point(382, -1);
+            this.paneSlide.Name = "paneSlide";
+            this.paneSlide.Size = new System.Drawing.Size(114, 15);
+            this.paneSlide.TabIndex = 3;
+            // 
+            // gBTrans
+            // 
+            this.gBTrans.Controls.Add(this.btnHome);
+            this.gBTrans.Controls.Add(this.label2);
+            this.gBTrans.Controls.Add(this.btnoOd);
+            this.gBTrans.Controls.Add(this.btnCash);
+            this.gBTrans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gBTrans.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBTrans.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.gBTrans.Location = new System.Drawing.Point(487, 239);
+            this.gBTrans.Name = "gBTrans";
+            this.gBTrans.Size = new System.Drawing.Size(361, 221);
+            this.gBTrans.TabIndex = 8;
+            this.gBTrans.TabStop = false;
+            this.gBTrans.Text = "SELECT TRANSACTION:";
+            // 
+            // btnHome
+            // 
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnHome.FlatAppearance.BorderSize = 2;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.Black;
+            this.btnHome.Image = global::DirectSelling.Properties.Resources.One_storied_house_icon__1_;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(98, 163);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(188, 38);
+            this.btnHome.TabIndex = 3;
+            this.btnHome.Text = "GO TO DASHBOARD";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(159, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 23);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "-or-";
+            // 
+            // btnoOd
+            // 
+            this.btnoOd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnoOd.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnoOd.FlatAppearance.BorderSize = 2;
+            this.btnoOd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnoOd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnoOd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnoOd.ForeColor = System.Drawing.Color.Black;
+            this.btnoOd.Image = global::DirectSelling.Properties.Resources.Cart_icon__1_;
+            this.btnoOd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnoOd.Location = new System.Drawing.Point(200, 72);
+            this.btnoOd.Name = "btnoOd";
+            this.btnoOd.Size = new System.Drawing.Size(136, 62);
+            this.btnoOd.TabIndex = 1;
+            this.btnoOd.Text = "ORDER";
+            this.btnoOd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnoOd.UseVisualStyleBackColor = true;
+            this.btnoOd.Click += new System.EventHandler(this.btnoOd_Click);
+            // 
+            // btnCash
+            // 
+            this.btnCash.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCash.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnCash.FlatAppearance.BorderSize = 2;
+            this.btnCash.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCash.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCash.ForeColor = System.Drawing.Color.Black;
+            this.btnCash.Image = global::DirectSelling.Properties.Resources.cash_icon__1_;
+            this.btnCash.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCash.Location = new System.Drawing.Point(29, 72);
+            this.btnCash.Name = "btnCash";
+            this.btnCash.Size = new System.Drawing.Size(136, 62);
+            this.btnCash.TabIndex = 0;
+            this.btnCash.Text = "SHOP";
+            this.btnCash.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCash.UseVisualStyleBackColor = true;
+            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -1404,19 +1417,6 @@
             // 
             this.printCash.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printCash_PrintPage);
             // 
-            // btnOut
-            // 
-            this.btnOut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnOut.FlatAppearance.BorderSize = 0;
-            this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOut.Image = global::DirectSelling.Properties.Resources.Button_Close_icon_16_;
-            this.btnOut.Location = new System.Drawing.Point(305, 13);
-            this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(22, 23);
-            this.btnOut.TabIndex = 106;
-            this.btnOut.UseVisualStyleBackColor = true;
-            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
-            // 
             // Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1431,12 +1431,6 @@
             this.Text = "Screen";
             this.Load += new System.EventHandler(this.Screen_Load);
             this.paneScreen.ResumeLayout(false);
-            this.paneLogo.ResumeLayout(false);
-            this.paneLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.gBTrans.ResumeLayout(false);
-            this.gBTrans.PerformLayout();
             this.paneCash.ResumeLayout(false);
             this.paneCash.PerformLayout();
             this.gbOrdCusId.ResumeLayout(false);
@@ -1451,6 +1445,12 @@
             this.gbCashCusCre.PerformLayout();
             this.gbCashOrdInfo.ResumeLayout(false);
             this.gbCashOrdInfo.PerformLayout();
+            this.paneLogo.ResumeLayout(false);
+            this.paneLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.gBTrans.ResumeLayout(false);
+            this.gBTrans.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -26,7 +26,7 @@ namespace DirectSelling
         SqlDataAdapter adapt;
         public static string Id;
 
-        string prodcs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=sellDB;Integrated Security=True";
+        string prodcs = @"Data Source=LOCALHOST\SQL2019;Initial Catalog=sellDB;Integrated Security=True";
        
 
 
@@ -387,6 +387,7 @@ namespace DirectSelling
             string price = tbCashSRP.Text;
             string quan = tbCashQty.Text;
             string year = DateTime.Now.Year.ToString();
+            
 
 
             try
@@ -403,6 +404,7 @@ namespace DirectSelling
                         string rate = (dr["Rate"].ToString());
                         double profit = Double.Parse(rate) * Double.Parse(price) * Double.Parse(quan);
                         string pro = profit.ToString();
+                        double tot = Double.Parse(quan) * Double.Parse(price);
 
                         proCon.Open();
                         SqlCommand proCmd = proCon.CreateCommand();
@@ -416,7 +418,8 @@ namespace DirectSelling
                             "'" + date + "', " +
                             "'" + month + "', " +
                             "'" + pro + "', " +
-                            "'" + year + "')";
+                            "'" + year + "', " +
+                            "'" + tot.ToString() + "')";
                         proCmd.ExecuteNonQuery();
 
                     
